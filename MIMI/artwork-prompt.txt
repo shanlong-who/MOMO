@@ -1,0 +1,24 @@
+Use case: style-transfer.
+Asset type: transparent animation sprite atlas for an R/Tk Windows desktop cat named MIMI.
+Input image 1 is the exact animation/layout template (MOMO sprite atlas). Input image 2 is the CHARACTER APPEARANCE reference (the user's silver classic tabby cat photograph).
+Edit image 1 into a NEW MIMI character atlas. Match image 2's identity: round broad silver-white face, large round green-gold eyes with dark rims, pink nose and ears, plush white muzzle/chest/paws, dense short silvery fur, very bold charcoal-black classic marble/spiral tabby markings over back and flanks, dark ringed tail. No collar, no pendant, no clothing. Keep cute polished 3D illustrated desktop-pet style similar to image 1, with recognizable photo-cat appearance, full body and clean silhouettes. The photo's backdrop/photographer mark are not part of the requested character and must not be reproduced.
+CRITICAL preserve image 1's atlas structure and every pose/frame EXACTLY: 8 equal columns, 11 equal rows, portrait canvas ratio 1536:2288, cell ratio 192:208. Keep the same character center, scale, baseline, margins and action in every corresponding cell. All 74 occupied cells must remain present. Unused cells must remain COMPLETELY TRANSPARENT. No grid, borders, text, labels, checkerboard, drop shadows, stage, objects, or background. Actual RGBA transparency.
+Rows in order (left to right):
+1 idle/blink: 7 frames then 1 EMPTY cell.
+2 run right: 8 frames.
+3 run left: 8 frames.
+4 paw greeting: 4 frames then 4 EMPTY cells.
+5 jump: 5 frames then 3 EMPTY cells.
+6 sad/tired then recovery: 8 frames.
+7 waiting paw gestures: 6 frames then 2 EMPTY cells.
+8 playful paw gestures and crouch: 6 frames then 2 EMPTY cells.
+9 stretch/eyes closed then neutral: 6 frames then 2 EMPTY cells.
+10 eight successive look directions: 8 frames exactly as template.
+11 eight remaining look directions: 8 frames exactly as template.
+Maintain the original individual motion differences. Every frame shows the SAME MIMI cat, no turquoise or colored accessories anywhere. Transparent canvas, preferably exact 1536x2288 pixels.
+
+Refinement prompt:
+Use case: precise-object-edit / background-extraction.
+Input is an almost finished MIMI transparent sprite atlas. Refine ONLY the alpha edges and transparent background. Keep EVERY cat, every pose, stripe, eye, facial expression, frame position, frame scale and layout IDENTICAL. Do not redesign or reflow anything.
+Remove the scattered white, grey, yellow and red pixel speckles/halos around the silhouettes and in the gutters. Make all non-cat pixels genuinely alpha=0. Clean antialiased silhouette contours close to the fur. Preserve white chest and white paws inside the silhouettes: these are part of the cat, not background. No outer glow, no white outline, no black background, no checkerboard. The cats must be crisp clean cutouts when displayed over a dark desktop or any arbitrary wallpaper.
+All 74 cats in exactly the same 8-column 11-row grid must remain. The intentionally blank cells stay transparent. Keep full body, ears, tail and paws. Do not combine adjacent cells. The cat remains the same silver classic tabby with green-gold eyes and no collar. Output genuine RGBA transparency, portrait 1536x2288 canvas if possible.
