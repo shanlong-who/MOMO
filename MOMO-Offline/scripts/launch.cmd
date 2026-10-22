@@ -13,7 +13,7 @@ if defined MOMO_RUNNER goto run_momo
 
 rem Read standard R installer registry keys. No registry values are changed.
 for %%K in ("HKCU\Software\R-core\R" "HKCU\Software\R-core\R64" "HKLM\Software\R-core\R" "HKLM\Software\R-core\R64" "HKLM\Software\WOW6432Node\R-core\R") do (
-  for /f "tokens=2,*" %%A in ('reg query "%%~K" /v InstallPath 2^>nul') do (
+  for /f "tokens=2,*" %%A in ('reg query "%%~K" /v InstallPath /s 2^>nul') do (
     if /i "%%A"=="REG_SZ" if not defined MOMO_RUNNER call :try_home "%%B"
   )
 )

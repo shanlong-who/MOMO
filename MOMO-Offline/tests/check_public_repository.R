@@ -3,8 +3,8 @@ source_file <- tryCatch(sys.frame(1L)$ofile, error = function(e) NULL)
 if (is.null(source_file)) source_file <- sub("^--file=", "", grep("^--file=", commandArgs(FALSE), value = TRUE)[[1L]])
 repo_dir <- dirname(dirname(dirname(normalizePath(source_file, winslash = "/", mustWork = TRUE))))
 root_entries <- setdiff(list.files(repo_dir, all.files = TRUE, no.. = TRUE), ".git")
-expected_entries <- c(".gitattributes", ".gitignore", "LICENSE", "README.md",
-                      "MOMO-ChatGPT", "MOMO-Offline", "MIMI-Offline")
+expected_entries <- c(".gitattributes", ".gitignore", ".github", "LICENSE", "README.md",
+                      "MOMO-ChatGPT", "MOMO-Offline", "MIMI-Offline", "portable")
 stopifnot(setequal(root_entries, expected_entries))
 relative_files <- list.files(repo_dir, recursive = TRUE, all.files = TRUE, no.. = TRUE)
 relative_files <- relative_files[!grepl("^\\.git(/|$)", relative_files)]
@@ -64,6 +64,6 @@ sprite <- read_member("momo/spritesheet.webp", binary = TRUE)
 stopifnot(length(sprite) > 1000L, identical(rawToChar(sprite[1:4]), "RIFF"),
           identical(rawToChar(sprite[9:12]), "WEBP"))
 stopifnot(!length(grepRaw("[A-Za-z]:[/\\\\]+Users[/\\\\]", sprite, ignore.case = TRUE, all = TRUE)))
-cat("PASS: three public product folders, standalone source files and valid documentation links.\n")
+cat("PASS: three public product folders, portable build tooling and valid documentation links.\n")
 cat("PASS: no personal paths, local shortcuts, runtime logs or recovery archives.\n")
 cat("PASS: sanitized chat-app package contains its v2 manifest, WebP artwork, guide and license.\n")

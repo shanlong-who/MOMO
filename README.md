@@ -7,6 +7,29 @@ chat-app version of MOMO, or an offline desktop cat powered by R.
 | :---: | :---: |
 | <img src="MOMO-Offline/assets/momo-preview.png" alt="MOMO, a silver tabby with a teal collar" width="192"> | <img src="MIMI-Offline/assets/mimi-preview.png" alt="MIMI, a silver classic tabby without a collar" width="192"> |
 
+## Download a portable desktop cat
+
+For Windows 10/11 on Intel or AMD x64, download either portable ZIP from
+[the latest release](https://github.com/shanlong-who/MOMO/releases/latest):
+
+- **MOMO-Portable-1.0.0-windows-x64.zip**
+- **MIMI-Portable-1.0.0-windows-x64.zip**
+
+Extract the entire ZIP and double-click **Start MOMO.cmd** or **Start MIMI.cmd**.
+R 4.6.1, Tcl/Tk and ps are included. No R installation, RStudio, account or
+internet connection is needed to run the cats. Download both ZIPs to use both
+cats at the same time. Each portable edition has a **Check** launcher for file
+integrity and animation diagnostics.
+
+Use the named portable assets on the release page. GitHub's automatic
+**Source code (zip)** download contains the source editions, which require an
+existing R installation. The original three folders below are retained.
+
+Build instructions, runtime sources and test scope are documented in
+[portable/README.md](portable/README.md). SHA-256 checksums, a test report and
+the matching R/ps source archives accompany the release.
+
+
 ## Choose a version
 
 | Folder | Version | How to use it |

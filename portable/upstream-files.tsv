@@ -1,0 +1,6 @@
+file	sha256	url
+R-4.6.1-win.exe	c5424c40cd70ef85765a55d2ff96bb602b5f30ed536938ff004f14db5db3c2df	https://cloud.r-project.org/bin/windows/base/R-4.6.1-win.exe
+R-4.6.1.tar.gz	4da6e61d2c0aac5f14a2e7e432cb5fcc269efe83da4293050ba7f03dff4e2cf4	https://cloud.r-project.org/src/base/R-4/R-4.6.1.tar.gz
+ps_1.9.3.zip	0fbe9eab98f77b3b20621c031f8a297a82dfdca0b3abef47d92d41896c3cb1b3	https://cloud.r-project.org/bin/windows/contrib/4.6/ps_1.9.3.zip
+ps_1.9.3.tar.gz	7b227f0627709a2073daf960ac612a0b87d03e18f7dd5c1938048ed440ef2e68	https://cloud.r-project.org/src/contrib/ps_1.9.3.tar.gz
+innounp-2.zip	10fce27b6344b7674d5625cc34afca1c88c12183d957c6d93e401097fa2556cd	https://github.com/jrathlev/InnoUnpacker-Windows-GUI/releases/download/ui_2_2_13/innounp-2.zip

@@ -1,0 +1,84 @@
+name: Portable Windows packages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'portable/**'
+      - 'MOMO-Offline/**'
+      - 'MIMI-Offline/**'
+      - '.github/workflows/portable-windows.yml'
+  pull_request:
+    paths:
+      - 'portable/**'
+      - 'MOMO-Offline/**'
+      - 'MIMI-Offline/**'
+      - '.github/workflows/portable-windows.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    runs-on: windows-2022
+    timeout-minutes: 25
+    env:
+      RELEASE_VERSION: '1.0.0'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Download and verify pinned build inputs
+        shell: pwsh
+        run: |
+          $buildRoot = Join-Path $env:RUNNER_TEMP 'pet-portable'
+          New-Item -ItemType Directory -Path $buildRoot | Out-Null
+          $inputs = Import-Csv 'portable/upstream-files.tsv' -Delimiter "`t"
+          foreach ($inputFile in $inputs) {
+            $destination = Join-Path $buildRoot $inputFile.file
+            Invoke-WebRequest -Uri $inputFile.url -OutFile $destination
+            $actual = (Get-FileHash -LiteralPath $destination -Algorithm SHA256).Hash.ToLowerInvariant()
+            if ($actual -ne $inputFile.sha256) { throw "Checksum mismatch: $($inputFile.file)" }
+          }
+          "PET_BUILD_ROOT=$buildRoot" | Out-File $env:GITHUB_ENV -Append -Encoding utf8
+      - name: Extract clean R without installation
+        shell: pwsh
+        run: |
+          Expand-Archive -LiteralPath (Join-Path $env:PET_BUILD_ROOT 'innounp-2.zip') -DestinationPath (Join-Path $env:PET_BUILD_ROOT 'unpacker')
+          $extractRoot = Join-Path $env:PET_BUILD_ROOT 'official-R'
+          & (Join-Path $env:PET_BUILD_ROOT 'unpacker/innounp.exe') -x -a -b -q "-d$extractRoot" (Join-Path $env:PET_BUILD_ROOT 'R-4.6.1-win.exe') *> (Join-Path $env:PET_BUILD_ROOT 'extraction.log')
+          if ($LASTEXITCODE -ne 0) { Get-Content (Join-Path $env:PET_BUILD_ROOT 'extraction.log') -Tail 20; exit $LASTEXITCODE }
+          "PET_CLEAN_R=$extractRoot\{app}" | Out-File $env:GITHUB_ENV -Append -Encoding utf8
+          $buildLibrary = Join-Path $env:PET_BUILD_ROOT 'build-library'
+          New-Item -ItemType Directory -Path $buildLibrary | Out-Null
+          "R_LIBS_USER=$buildLibrary" | Out-File $env:GITHUB_ENV -Append -Encoding utf8
+      - name: Install build and test packages outside the runtime
+        shell: pwsh
+        run: |
+          & (Join-Path $env:PET_CLEAN_R 'bin/x64/Rscript.exe') --vanilla -e 'install.packages(c("digest", "zip", "processx", "ps"), repos="https://cloud.r-project.org", lib=Sys.getenv("R_LIBS_USER"), type="binary")'
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Validate the public source editions
+        shell: pwsh
+        run: |
+          foreach ($test in @('MOMO-Offline/tests/check_public_files.R', 'MIMI-Offline/tests/check_public_files.R', 'MOMO-Offline/tests/check_public_repository.R', 'MOMO-Offline/tests/check_companions.R')) {
+            & (Join-Path $env:PET_CLEAN_R 'bin/x64/Rscript.exe') --vanilla $test
+            if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          }
+      - name: Build both portable ZIPs
+        shell: pwsh
+        run: |
+          & (Join-Path $env:PET_CLEAN_R 'bin/x64/Rscript.exe') --vanilla portable/build_portable.R $env:GITHUB_WORKSPACE $env:PET_CLEAN_R (Join-Path $env:PET_BUILD_ROOT 'ps_1.9.3.zip') (Join-Path $env:PET_BUILD_ROOT 'dist') $env:RELEASE_VERSION
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Test the extracted release ZIPs
+        shell: pwsh
+        run: |
+          & (Join-Path $env:PET_CLEAN_R 'bin/x64/Rscript.exe') --vanilla portable/test_portable.R (Join-Path $env:PET_BUILD_ROOT 'dist') (Join-Path $env:PET_BUILD_ROOT 'validation') (Join-Path $env:PET_BUILD_ROOT 'PORTABLE-TEST-RESULTS.txt')
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Save packages and test results
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: portable-windows-x64
+          path: |
+            ${{ env.PET_BUILD_ROOT }}/dist/*.zip
+            ${{ env.PET_BUILD_ROOT }}/dist/SHA256SUMS.txt
+            ${{ env.PET_BUILD_ROOT }}/PORTABLE-TEST-RESULTS.txt
+          retention-days: 14
