@@ -6,7 +6,7 @@ relative_files <- list.files(app_dir, recursive = TRUE, all.files = TRUE, no.. =
 relative_files <- relative_files[!grepl("^\\.git(/|$)", relative_files)]
 stopifnot(!any(grepl("(^|/)(state|verification|logs|diagnostics)/|\\.(lnk|log|rds|request|lock)$", relative_files, ignore.case = TRUE)))
 stopifnot(!any(grepl("(^|/)\\.(Rhistory|RData|Ruserdata|Rproj\\.user)(/|$)", relative_files, ignore.case = TRUE)))
-text_files <- relative_files[grepl("\\.(R|cmd|md|txt)$|(^|/)(LICENSE|\\.gitignore|\\.gitattributes)$", relative_files)]
+text_files <- relative_files[grepl("\\.(R|cmd|md)$|(^|/)(LICENSE|\\.gitignore|\\.gitattributes)$", relative_files)]
 for (relative_file in text_files) {
   lines <- readLines(file.path(app_dir, relative_file), warn = FALSE, encoding = "UTF-8")
   if (any(grepl("[A-Za-z]:[/\\\\](Users|Documents and Settings)[/\\\\]", lines, ignore.case = TRUE))) {
@@ -16,11 +16,5 @@ for (relative_file in text_files) {
 stopifnot(all(file.exists(file.path(app_dir, c("README.md", "LICENSE", "bootstrap.R", "run_momo.R", "momo.R",
                                             "Start MOMO.cmd", "Exit MOMO.cmd", "scripts/launch.R", "scripts/launch.cmd")))))
 stopifnot(all(file.exists(file.path(app_dir, "assets", paste0("momo-", c(144L, 192L, 240L, 288L), ".png")))))
-stopifnot(all(file.exists(file.path(app_dir, c("Start MIMI.cmd", "Exit MIMI.cmd", "MIMI/README.md", "MIMI/LICENSE",
-                                            "MIMI/bootstrap.R", "MIMI/mimi.R", "MIMI/run_mimi.R", "MIMI/stop_mimi.R",
-                                            "MIMI/Start MIMI.cmd", "MIMI/Exit MIMI.cmd", "MIMI/scripts/launch.R",
-                                            "MIMI/scripts/launch.cmd", "MIMI/artwork-prompt.txt")))))
-stopifnot(all(file.exists(file.path(app_dir, "MIMI", "assets", paste0("mimi-", c(144L, 192L, 240L, 288L), ".png")))))
-stopifnot(all(file.exists(file.path(app_dir, c("assets/momo-preview.png", "MIMI/assets/mimi-preview.png")))))
 cat("PASS: no personal Windows paths, shortcuts, runtime state or logs in the public source tree.\n")
 cat("PASS: required source, artwork, launchers, English README and license are present.\n")

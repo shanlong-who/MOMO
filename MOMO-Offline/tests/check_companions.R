@@ -3,13 +3,13 @@ library(ps)
 
 source_file <- tryCatch(sys.frame(1L)$ofile, error = function(e) NULL)
 if (is.null(source_file)) source_file <- sub("^--file=", "", grep("^--file=", commandArgs(FALSE), value = TRUE)[[1L]])
-app_dir <- dirname(dirname(normalizePath(source_file, winslash = "/", mustWork = TRUE)))
+app_dir <- dirname(dirname(dirname(normalizePath(source_file, winslash = "/", mustWork = TRUE))))
 momo_env <- new.env()
 mimi_env <- new.env()
-source(file.path(app_dir, "bootstrap.R"), local = momo_env)
-source(file.path(app_dir, "MIMI", "bootstrap.R"), local = mimi_env)
-source(file.path(app_dir, "momo.R"), local = momo_env)
-source(file.path(app_dir, "MIMI", "mimi.R"), local = mimi_env)
+source(file.path(app_dir, "MOMO-Offline", "bootstrap.R"), local = momo_env)
+source(file.path(app_dir, "MIMI-Offline", "bootstrap.R"), local = mimi_env)
+source(file.path(app_dir, "MOMO-Offline", "momo.R"), local = momo_env)
+source(file.path(app_dir, "MIMI-Offline", "mimi.R"), local = mimi_env)
 
 check_companions <- function() {
   path_variables <- c("MOMO_DATA_DIR", "MOMO_CACHE_DIR", "MIMI_DATA_DIR", "MIMI_CACHE_DIR")

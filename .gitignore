@@ -23,3 +23,12 @@ logs/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Local recovery archives and machine-specific setup
+maintenance/
+*.bundle
+.env
+.env.*
+
+# The sanitized chat-app pet package is a public source deliverable.
+!MOMO-ChatGPT/momo-pet-v2.zip
