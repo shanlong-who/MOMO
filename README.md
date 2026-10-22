@@ -15,7 +15,8 @@ For Windows 10/11 on Intel or AMD x64, download either portable ZIP from
 - **MOMO-Portable-1.0.0-windows-x64.zip**
 - **MIMI-Portable-1.0.0-windows-x64.zip**
 
-Extract the entire ZIP and double-click **Start MOMO.cmd** or **Start MIMI.cmd**.
+Extract the entire ZIP and double-click **Start MOMO.exe** or **Start MIMI.exe**
+(the matching cat icon). The original Start `.cmd` entries remain available.
 R 4.6.1, Tcl/Tk and ps are included. No R installation, RStudio, account or
 internet connection is needed to run the cats. Download both ZIPs to use both
 cats at the same time. Each portable edition has a **Check** launcher for file

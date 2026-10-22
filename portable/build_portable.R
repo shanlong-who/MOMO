@@ -13,6 +13,8 @@ output.directory <- normalizePath(build.arguments[[4L]], winslash = "/", mustWor
 release.version <- build.arguments[[5L]]
 script.file <- sub("^--file=", "", grep("^--file=", commandArgs(FALSE), value = TRUE)[[1L]])
 template.directory <- file.path(dirname(normalizePath(script.file, winslash = "/")), "templates")
+icon.compiler <- chartr("/", "\\", file.path(Sys.getenv("SystemRoot"), "Microsoft.NET", "Framework64", "v4.0.30319", "csc.exe"))
+if (!file.exists(icon.compiler)) stop("The Windows .NET Framework C# compiler is required to build icon launchers.")
 if (!grepl("^[0-9]+\\.[0-9]+\\.[0-9]+$", release.version)) stop("Use a semantic release version.")
 if (dir.exists(output.directory)) stop("Build output already exists. Choose a new empty output directory.")
 dir.create(output.directory, recursive = TRUE)
@@ -67,7 +69,8 @@ for (pet.name in c("MOMO", "MIMI")) {
   stopifnot(all(unname(tools::md5sum(file.path(pet.runtime, "library", "ps", ps.files))) == sub(" .*", "", ps.manifest)))
 
   app.files <- c("bootstrap.R", paste0(pet.id, ".R"))
-  app.assets <- paste0("assets/", pet.id, "-", c(144L, 192L, 240L, 288L), ".png")
+  app.assets <- c(paste0("assets/", pet.id, "-", c(144L, 192L, 240L, 288L), ".png"),
+                  paste0("assets/", pet.id, ".ico"))
   for (relative.file in c(app.files, app.assets)) {
     copy_file(file.path(pet.source, relative.file), file.path(pet.directory, "app", relative.file))
   }
@@ -77,10 +80,23 @@ for (pet.name in c("MOMO", "MIMI")) {
     write_text(gsub("@PET@", pet.name, template.lines, fixed = TRUE),
                file.path(pet.directory, "scripts", template.name), windows = endsWith(template.name, ".cmd"))
   }
+  # The Windows wrapper supplies a relocatable icon entry; the application stays in R.
+  icon.source <- file.path(pet.directory, "scripts", "icon-launcher.cs")
+  write_text(gsub("@PET@", pet.name, readLines(file.path(template.directory, "icon-launcher.cs")), fixed = TRUE), icon.source)
+  icon.output <- file.path(pet.directory, paste0("Start ", pet.name, ".exe"))
+  icon.path <- file.path(pet.directory, "app", "assets", paste0(pet.id, ".ico"))
+  compiler.output <- system2(icon.compiler, c("/nologo", "/target:winexe", "/platform:anycpu", "/optimize+", "/debug-",
+    "/reference:System.Windows.Forms.dll", paste0("/win32icon:", shQuote(chartr("/", "\\", icon.path))),
+    paste0("/out:", shQuote(chartr("/", "\\", icon.output))), shQuote(chartr("/", "\\", icon.source))), stdout = TRUE, stderr = TRUE)
+  if (!is.null(attr(compiler.output, "status")) || !file.exists(icon.output)) {
+    stop("Icon launcher compilation failed: ", paste(compiler.output, collapse = "\n"))
+  }
   for (action in c(Start = "start", Exit = "stop", Check = "check")) {
     label <- names(c(Start = "start", Exit = "stop", Check = "check"))[match(action, c("start", "stop", "check"))]
     lines <- c("@echo off", "setlocal EnableExtensions DisableDelayedExpansion",
-               paste0('call "%~dp0scripts\\portable.cmd" ', action), "set \"PET_EXIT_CODE=%ERRORLEVEL%\"")
+               'set "PET_ENTRY_HELPER=%~dp0scripts\\portable.cmd"',
+               paste0('"%SystemRoot%\\System32\\cmd.exe" /d /s /c ""%%PET_ENTRY_HELPER%%" ', action, '"'),
+               "set \"PET_EXIT_CODE=%ERRORLEVEL%\"")
     if (action == "check") lines <- c(lines, "echo.", "pause") else
       lines <- c(lines, "if not \"%PET_EXIT_CODE%\"==\"0\" (", "  echo.",
                  paste0("  echo ", pet.name, " could not complete the action. Read the message above."), "  pause", ")")
@@ -90,12 +106,14 @@ for (pet.name in c("MOMO", "MIMI")) {
   write_text(c(paste(pet.name, "Portable", release.version), "",
                "Windows 10/11, Intel or AMD 64-bit (x64).", "",
                "1. Extract the entire ZIP into a local folder.",
-               paste0("2. Double-click Start ", pet.name, ".cmd."),
+               paste0("2. Double-click Start ", pet.name, ".exe (the cat icon)."),
                paste0("3. Right-click the cat to change settings or exit. Exit ", pet.name, ".cmd also closes it."), "",
                "R, Tcl/Tk and ps are included. RStudio, an R installation, an account and internet access are not needed.",
-               "A console may appear briefly during startup. The cat then runs in a separate hidden-console R process.",
+               "The cat-icon entry starts without a console window. The original Start .cmd remains available as a fallback.",
+               "The small Windows icon entry uses the .NET Framework supplied with Windows 10/11; the cat itself runs in R.",
                "Opening Start again brings the existing cat home. Both cats can run at the same time.",
-               "Close the cat before moving its folder. Keep app, runtime and scripts together.",
+               "Close the cat before moving its folder. Keep the Start .exe, app, runtime and scripts together.",
+               "To place a cat icon on your desktop, create a Windows shortcut to Start .exe; keep the .exe in its folder.",
                "If the folder is in OneDrive or another cloud folder, keep all files available on this device.", "",
                "Controls: drag to move, click to greet, double-click to jump, right-click for the menu.",
                "The menu includes wandering, cursor tracking, always-on-top and four sizes.", "",
@@ -127,7 +145,8 @@ for (pet.name in c("MOMO", "MIMI")) {
                "See runtime/R/doc/COPYRIGHTS for the upstream component-specific source information.", "",
                "No RStudio components or personal R packages are included."), file.path(pet.directory, "THIRD-PARTY-NOTICES.txt"))
   write_text(c(paste0("Release: ", release.version), "Platform: windows-x64", "R: 4.6.1", "ps: 1.9.3",
-               "Tcl/Tk: 8.6.17", "Build method: official installer extraction; original runtime files verified with MD5"),
+               "Tcl/Tk: 8.6.17", "Package revision: cat-icon-launcher-1", "Icon entry: embedded artwork; paths resolved from the executable directory",
+               "Build method: official installer extraction; original runtime files verified with MD5"),
              file.path(pet.directory, "VERSIONS.txt"))
   release.files <- sort(list.files(pet.directory, recursive = TRUE, all.files = TRUE, no.. = TRUE))
   integrity <- data.frame(file = release.files,

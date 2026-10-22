@@ -3,6 +3,9 @@ library(processx)
 library(ps)
 library(zip)
 
+test.script <- sub("^--file=", "", grep("^--file=", commandArgs(FALSE), value = TRUE)[[1L]])
+icon.test <- file.path(dirname(normalizePath(test.script, winslash = "/")), "test_icons.ps1")
+
 if (.Platform$OS.type == "windows" && !l10n_info()[["UTF-8"]]) {
   invisible(Sys.setlocale("LC_CTYPE", ".UTF-8"))
   if (!l10n_info()[["UTF-8"]]) stop("The Unicode-path tests require a UTF-8 Windows R locale.")
@@ -35,23 +38,28 @@ test_portable <- function() {
                         HTTP_PROXY = "http://127.0.0.1:9", HTTPS_PROXY = "http://127.0.0.1:9",
                         ALL_PROXY = "http://127.0.0.1:9")
 
-  run_launcher <- function(pet.name, action, public = FALSE, timeout = 90) {
+  run_launcher <- function(pet.name, action, public = FALSE, timeout = 90, icon = TRUE) {
     pet.directory <- pet.directories[[pet.name]]
-    launcher <- if (public) file.path(pet.directory, paste(if (action == "start") "Start" else "Exit", paste0(pet.name, ".cmd"))) else
+    launcher <- if (public) file.path(pet.directory, paste(if (action == "start") "Start" else "Exit",
+      paste0(pet.name, if (action == "start" && icon) ".exe" else ".cmd"))) else
       file.path(pet.directory, "scripts", "portable.cmd")
     launcher <- normalizePath(launcher, winslash = "\\", mustWork = TRUE)
     command <- normalizePath(file.path(system.root, "System32", "cmd.exe"), winslash = "\\")
     if (action != "start") {
-      return(processx::run(command, c("/d", "/c", "call", shQuote(launcher, type = "cmd"), if (!public) action),
-        env = test.environment, wd = test.directory, timeout = timeout,
+      invocation <- paste0('""%PET_TEST_LAUNCHER%"', if (!public) paste0(" ", action), '"')
+      return(processx::run(command, c("/d", "/s", "/c", invocation),
+        env = c(test.environment, PET_TEST_LAUNCHER = launcher), wd = test.directory, timeout = timeout,
         error_on_status = FALSE, windows_hide_window = TRUE, windows_verbatim_args = TRUE))
     }
     stdout.file <- tempfile("launcher-", tmpdir = test.directory, fileext = ".out.txt")
     stderr.file <- tempfile("launcher-", tmpdir = test.directory, fileext = ".err.txt")
     status.file <- tempfile("launcher-", tmpdir = test.directory, fileext = ".status.txt")
     wrapper.file <- tempfile("invoke-", tmpdir = test.directory, fileext = ".cmd")
+    start.command <- if (public && icon)
+      '"%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" -NoProfile -NonInteractive -Command "$p = Start-Process -FilePath $env:PET_TEST_LAUNCHER -WorkingDirectory $env:PET_TEST_WORKDIR -WindowStyle Hidden -PassThru; if (-not $p.WaitForExit(75000)) { exit 124 }; exit $p.ExitCode" > "%PET_TEST_STDOUT%" 2> "%PET_TEST_STDERR%"' else
+      'call "%PET_TEST_LAUNCHER%" %PET_TEST_ACTION% > "%PET_TEST_STDOUT%" 2> "%PET_TEST_STDERR%"'
     writeLines(c("@echo off",
-                 'call "%PET_TEST_LAUNCHER%" %PET_TEST_ACTION% > "%PET_TEST_STDOUT%" 2> "%PET_TEST_STDERR%"',
+                 start.command,
                  'set "PET_TEST_EXIT=%ERRORLEVEL%"',
                  '> "%PET_TEST_STATUS%" echo PORTABLE_TEST_EXIT=%PET_TEST_EXIT%',
                  'exit /b %PET_TEST_EXIT%'), wrapper.file)
@@ -60,7 +68,8 @@ test_portable <- function() {
     # The wrapper records the real launcher exit status before that wait.
     process <- processx::process$new(command, c("/d", "/c", shQuote(wrapper.file, type = "cmd")),
       env = c(test.environment, PET_TEST_LAUNCHER = launcher, PET_TEST_ACTION = if (public) "" else action,
-              PET_TEST_STDOUT = stdout.file, PET_TEST_STDERR = stderr.file, PET_TEST_STATUS = status.file),
+              PET_TEST_STDOUT = stdout.file, PET_TEST_STDERR = stderr.file, PET_TEST_STATUS = status.file,
+              PET_TEST_WORKDIR = test.directory),
       wd = test.directory, windows_hide_window = TRUE, windows_verbatim_args = TRUE,
       stdout = NULL, stderr = NULL, cleanup = FALSE, cleanup_tree = FALSE)
     launcher.processes[[length(launcher.processes) + 1L]] <<- process
@@ -128,6 +137,11 @@ test_portable <- function() {
     dir.create(extraction.directory)
     zip::unzip(archive, exdir = extraction.directory)
     pet.directories[[pet.name]] <- file.path(extraction.directory, paste0(pet.name, "-Portable"))
+    icon.check <- processx::run(file.path(system.root, "System32", "WindowsPowerShell", "v1.0", "powershell.exe"),
+      c("-NoProfile", "-NonInteractive", "-File", icon.test, "-PetDirectory", pet.directories[[pet.name]], "-PetName", pet.name),
+      env = test.environment, wd = test.directory, timeout = 30, error_on_status = FALSE, windows_hide_window = TRUE)
+    require_success(icon.check, paste(pet.name, "embedded cat icon"))
+    results <- c(results, paste0("PASS: ", pet.name, " icon displayed by Windows matches its own cat artwork."))
     check <- require_success(run_launcher(pet.name, "check"), paste(pet.name, "integrity and self-test"))
     self.report <- readLines(file.path(state.root, tolower(pet.name), "cache", "diagnostics", "self-test.txt"))
     stopifnot(any(grepl("296 frame copies", self.report, fixed = TRUE)),
@@ -145,9 +159,11 @@ test_portable <- function() {
     stopifnot(startsWith(tolower(process.path), paste0(tolower(pet.directories[[pet.name]]), "/runtime/r/")))
     require_success(run_launcher(pet.name, "start", public = TRUE), paste(pet.name, "repeat Start"))
     stopifnot(identical(first.owner, read_owner(pet.name)))
+    require_success(run_launcher(pet.name, "start", public = TRUE, icon = FALSE), paste(pet.name, "legacy CMD Start"))
+    stopifnot(identical(first.owner, read_owner(pet.name)))
     window.report <- readLines(file.path(state.root, tolower(pet.name), "cache", "diagnostics", "last-window-state.txt"))
     stopifnot("Mapped: 1" %in% window.report, "Viewable: 1" %in% window.report)
-    results <- c(results, paste0("PASS: ", pet.name, " public Start launcher, visible window and one process after repeated Start."))
+    results <- c(results, paste0("PASS: ", pet.name, " cat-icon EXE and legacy CMD Start, visible window and one process after repeated Start."))
   }
   momo.owner <- read_owner("MOMO")
   mimi.owner <- read_owner("MIMI")
@@ -161,7 +177,7 @@ test_portable <- function() {
 
   for (pet.name in names(pet.directories)) {
     previous.directory <- pet.directories[[pet.name]]
-    relocated.directory <- file.path(dirname(previous.directory), paste0("Moved ", pet.name, " Portable"))
+    relocated.directory <- file.path(dirname(previous.directory), paste0("Moved ", pet.name, " Portable & 100%"))
     stopifnot(startsWith(previous.directory, paste0(test.directory, "/")),
               startsWith(relocated.directory, paste0(test.directory, "/")))
     stopifnot(file.rename(previous.directory, relocated.directory))
@@ -183,7 +199,7 @@ test_portable <- function() {
     }
     check_missing_file(paste0("app/assets/", tolower(pet.name), "-192.png"), "artwork is missing")
     check_missing_file("runtime/R/bin/x64/Rscript.exe", "bundled R runtime is missing")
-    results <- c(results, paste0("PASS: ", pet.name, " runs after relocation; missing artwork/runtime gives a clear failure without system-R fallback."))
+    results <- c(results, paste0("PASS: ", pet.name, " cat-icon entry runs after relocation with shell characters; missing artwork/runtime gives a clear failure without system-R fallback."))
   }
   results <- c(results,
                "PASS: launchers work with no R on PATH, invalid system-R overrides, invalid external libraries and a failing user profile.",
