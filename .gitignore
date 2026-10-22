@@ -1,0 +1,25 @@
+# Local R sessions and IDE files
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+
+# Local launch shortcuts and runtime files
+*.lnk
+*.log
+*.rds
+state/
+verification/
+diagnostics/
+logs/
+*.request
+*.lock
+
+# Local overrides and generated distribution archives
+.Renviron
+.Rprofile
+*.zip
+*.tar.gz
+.DS_Store
+Thumbs.db
+desktop.ini
