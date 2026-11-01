@@ -1,35 +1,38 @@
 # MOMO & MIMI
 
-A personal cat companion project, made just for fun. Choose the original
-chat-app version of MOMO, or an offline desktop cat powered by R.
+Two small native Windows desktop cats, made just for fun. The latest **Lite 2.0.0** packages run without R and are about **92% smaller** than the earlier R-bundled downloads.
+
+## Download the desktop pets
+
+For Windows 10/11 on Intel or AMD x64:
+
+| Pet | Download | ZIP size |
+| --- | --- | --- |
+| MOMO | [MOMO-Lite-2.0.0-windows-x64.zip](https://github.com/shanlong-who/MOMO/releases/download/v2.0.0/MOMO-Lite-2.0.0-windows-x64.zip) | 6.62 MB |
+| MIMI | [MIMI-Lite-2.0.0-windows-x64.zip](https://github.com/shanlong-who/MOMO/releases/download/v2.0.0/MIMI-Lite-2.0.0-windows-x64.zip) | 6.50 MB |
+
+Extract a ZIP, then double-click **MOMO.exe** or **MIMI.exe**. Each EXE includes its artwork and cat icon; it can be moved on its own. No R, RStudio, separately installed .NET runtime, account or internet connection is needed. Download both to run the two cats together.
+
+MOMO no longer wears a collar or pendant. MIMI has clearer fur, eyes and tabby markings. All 74 frames per cat are aligned with transparent margins to prevent clipped paws or ears and fragments from neighboring frames.
+
+Drag to move, click to say hello, double-click to jump, and right-click for actions, sizes, preferences or exit. Opening the same EXE again brings that cat home. Each cat saves its own settings under `%LOCALAPPDATA%\DesktopPetsLite`.
+
+The [latest release](https://github.com/shanlong-who/MOMO/releases/latest) includes SHA-256 checksums and a validation report. Both final packages passed local Windows checks, including all 148 frames at four sizes, transparent windows, simultaneous cats, independent exits and settings recovery. The EXEs are unsigned.
+
+Use the named release assets for the ready-to-run native pets. GitHub's automatic **Source code (zip)** download is a repository snapshot of the legacy source editions below.
+
+## Legacy R and chat-app editions
+
+The original source folders and the earlier R-portable build instructions remain available for reference. The images and instructions below describe those older editions. For the current native pets, use the downloads above.
+
+<details>
+<summary>Show legacy artwork, R setup, source editions and development checks</summary>
 
 | MOMO | MIMI |
 | :---: | :---: |
 | <img src="MOMO-Offline/assets/momo-preview.png" alt="MOMO, a silver tabby with a teal collar" width="192"> | <img src="MIMI-Offline/assets/mimi-preview.png" alt="MIMI, a silver classic tabby without a collar" width="192"> |
 
-## Download a portable desktop cat
-
-For Windows 10/11 on Intel or AMD x64, download either portable ZIP from
-[the latest release](https://github.com/shanlong-who/MOMO/releases/latest):
-
-- **MOMO-Portable-1.0.0-windows-x64.zip**
-- **MIMI-Portable-1.0.0-windows-x64.zip**
-
-Extract the entire ZIP and double-click **Start MOMO.exe** or **Start MIMI.exe**
-(the matching cat icon). The original Start `.cmd` entries remain available.
-R 4.6.1, Tcl/Tk and ps are included. No R installation, RStudio, account or
-internet connection is needed to run the cats. Download both ZIPs to use both
-cats at the same time. Each portable edition has a **Check** launcher for file
-integrity and animation diagnostics.
-
-Use the named portable assets on the release page. GitHub's automatic
-**Source code (zip)** download contains the source editions, which require an
-existing R installation. The original three folders below are retained.
-
-Build instructions, runtime sources and test scope are documented in
-[portable/README.md](portable/README.md). SHA-256 checksums, a test report and
-the matching R/ps source archives accompany the release.
-
+The historical R-bundled release is recorded under [v1.0.0](https://github.com/shanlong-who/MOMO/releases/tag/v1.0.0). Its Windows ZIPs have been replaced by Lite 2.0.0. Build instructions for that older edition are in [portable/README.md](portable/README.md).
 
 ## Choose a version
 
@@ -188,3 +191,6 @@ prompts are in [MIMI-Offline/artwork-prompt.txt](MIMI-Offline/artwork-prompt.txt
 The chat-app ZIP keeps the original manifest and animation sheet. Local build
 reports and personal paths have been removed from the public package.
 The source code and included generated artwork use the [MIT License](LICENSE).
+
+</details>
+
