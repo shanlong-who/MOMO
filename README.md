@@ -1,8 +1,11 @@
 # MOMO & MIMI
 
-Two small native Windows desktop cats, made just for fun. The latest **Lite 2.0.0** packages run without R and are about **92% smaller** than the earlier R-bundled downloads.
+Two small Windows desktop cats, made just for fun. **Lite 2.0.0** runs without
+R, RStudio, a separately installed .NET runtime or an internet connection.
 
-## Download the desktop pets
+![MOMO and MIMI](Releases/2.0.0/MOMO-MIMI-preview.png)
+
+## Download and run
 
 For Windows 10/11 on Intel or AMD x64:
 
@@ -11,186 +14,65 @@ For Windows 10/11 on Intel or AMD x64:
 | MOMO | [MOMO-Lite-2.0.0-windows-x64.zip](https://github.com/shanlong-who/MOMO/releases/download/v2.0.0/MOMO-Lite-2.0.0-windows-x64.zip) | 6.62 MB |
 | MIMI | [MIMI-Lite-2.0.0-windows-x64.zip](https://github.com/shanlong-who/MOMO/releases/download/v2.0.0/MIMI-Lite-2.0.0-windows-x64.zip) | 6.50 MB |
 
-Extract a ZIP, then double-click **MOMO.exe** or **MIMI.exe**. Each EXE includes its artwork and cat icon; it can be moved on its own. No R, RStudio, separately installed .NET runtime, account or internet connection is needed. Download both to run the two cats together.
+Extract the ZIP and double-click **MOMO.exe** or **MIMI.exe**. Each EXE contains
+its artwork and icon and can be moved on its own. Both cats can run together.
+The packages are about 92% smaller than the previous R-bundled downloads.
 
-MOMO no longer wears a collar or pendant. MIMI has clearer fur, eyes and tabby markings. All 74 frames per cat are aligned with transparent margins to prevent clipped paws or ears and fragments from neighboring frames.
+MOMO has no collar or pendant. MIMI has clearer fur, eyes and tabby markings.
+Complete silhouettes and transparent margins prevent clipped paws or ears and
+fragments from neighboring animation frames. The EXEs are unsigned.
 
-Drag to move, click to say hello, double-click to jump, and right-click for actions, sizes, preferences or exit. Opening the same EXE again brings that cat home. Each cat saves its own settings under `%LOCALAPPDATA%\DesktopPetsLite`.
+Drag to move, click to say hello, double-click to jump, and right-click for
+actions, sizes, preferences or exit. Opening the same EXE again brings that
+cat home. Settings are separate under `%LOCALAPPDATA%\DesktopPetsLite\MOMO`
+and `%LOCALAPPDATA%\DesktopPetsLite\MIMI`.
 
-The [latest release](https://github.com/shanlong-who/MOMO/releases/latest) includes SHA-256 checksums and a validation report. Both final packages passed local Windows checks, including all 148 frames at four sizes, transparent windows, simultaneous cats, independent exits and settings recovery. The EXEs are unsigned.
+## Project folders
 
-Use the named release assets for the ready-to-run native pets. GitHub's automatic **Source code (zip)** download is a repository snapshot of the legacy source editions below.
+The current project has four product folders:
 
-## Legacy R and chat-app editions
-
-The original source folders and the earlier R-portable build instructions remain available for reference. The images and instructions below describe those older editions. For the current native pets, use the downloads above.
-
-<details>
-<summary>Show legacy artwork, R setup, source editions and development checks</summary>
-
-| MOMO | MIMI |
-| :---: | :---: |
-| <img src="MOMO-Offline/assets/momo-preview.png" alt="MOMO, a silver tabby with a teal collar" width="192"> | <img src="MIMI-Offline/assets/mimi-preview.png" alt="MIMI, a silver classic tabby without a collar" width="192"> |
-
-The historical R-bundled release is recorded under [v1.0.0](https://github.com/shanlong-who/MOMO/releases/tag/v1.0.0). Its Windows ZIPs have been replaced by Lite 2.0.0. Build instructions for that older edition are in [portable/README.md](portable/README.md).
-
-## Choose a version
-
-| Folder | Version | How to use it |
-| --- | --- | --- |
-| [MOMO-ChatGPT](MOMO-ChatGPT/README.md) | Original chat-app MOMO assets | Contains the v2 pet package for the chat-app version |
-| [MOMO-Offline](MOMO-Offline/README.md) | Offline MOMO for Windows | Open this folder and double-click **Start MOMO.cmd** |
-| [MIMI-Offline](MIMI-Offline/README.md) | Offline MIMI for Windows | Open this folder and double-click **Start MIMI.cmd** |
-
-The offline cats can wave, jump, play, stretch, rest, wander around and look at
-your cursor. They have the same controls and animation layout, with different
-cat artwork. Both can run together and keep their settings separately.
-
-## Repository layout
-
-```text
-MOMO/
-  MOMO-ChatGPT/
-    README.md
-    momo-pet-v2.zip
-  MOMO-Offline/
-    Start MOMO.cmd
-    Exit MOMO.cmd
-    run_momo.R
-    assets/
-    scripts/
-    tests/
-  MIMI-Offline/
-    Start MIMI.cmd
-    Exit MIMI.cmd
-    run_mimi.R
-    assets/
-    scripts/
-    tests/
-```
-
-Each offline folder contains its own runtime files and artwork. Keep the
-complete folder together when copying or moving it.
-
-## First-time setup for the offline cats
-
-Requirements: Windows 10 or 11, R 4.2 or later with Tcl/Tk, and the **ps** package.
-Both cats have been tested with R 4.6.0 and Tcl/Tk 8.6.17 on Windows. This version
-uses Windows-specific transparency; macOS and Linux are not supported.
-
-1. Install [R for Windows](https://cran.r-project.org/bin/windows/base/) if needed,
-   keeping its Tcl/Tk component enabled.
-2. Install the only additional runtime package in that R installation:
-
-   ```r
-   install.packages("ps")
-   ```
-
-3. Download the repository using **Code → Download ZIP**, or clone it.
-4. Extract the whole download. Start the cats from the extracted folders.
-
-Setup may need internet access. Once R, ps and the files are installed locally,
-the offline versions work without a network connection. ChatGPT and RStudio
-do not need to be open. No packages or artwork are downloaded at startup.
-
-## Start and stop
-
-Open **MOMO-Offline/Start MOMO.cmd** or **MIMI-Offline/Start MIMI.cmd**.
-To have both cats on your desktop, open both start files. A console may appear
-briefly while R is checked, then close once the cat starts.
-
-Right-click a cat and choose **Exit MOMO** or **Exit MIMI**, or use the matching
-exit file in its folder. Opening a start file again brings the same cat home.
-
-The launchers find R using the selected cat's optional `MOMO_RSCRIPT` or
-`MIMI_RSCRIPT` setting, then PATH, standard installer registry entries and common
-R installation folders. They use the Windows PowerShell included with Windows
-to start the installed R in a separate hidden-console process.
-
-To make a desktop shortcut, point it to the selected cat's start file and choose
-the matching `assets/momo.ico` or `assets/mimi.ico` as its icon. Recreate the
-shortcut if the app folder is moved. Personal Windows shortcuts are not included.
-
-### Start from R or RStudio
-
-From the repository root, choose one command:
-
-```r
-source("MOMO-Offline/run_momo.R")
-```
-
-```r
-source("MIMI-Offline/run_mimi.R")
-```
-
-That R session stays busy until the cat closes. Use the Windows launchers or
-two separate R sessions to run both cats together.
-
-## Controls
-
-| Action | Result |
+| Folder | Contents |
 | --- | --- |
-| Drag a cat | Move it |
-| Click | Say hello |
-| Double-click | Jump |
-| Right-click | Actions, size, pause, settings and exit |
-| Open its launcher again | Bring that cat home |
-
-The menu includes wandering, cursor tracking, always-on-top and four sizes.
-There is no tray icon. Position bounds use the primary screen, with a taskbar margin.
-
-## Local data and privacy
-
-The offline cats read local artwork. Neither makes network requests, sends
-telemetry, uses an account or calls an AI service. They do not add themselves
-to Windows startup or change security settings.
-
-Each cat stores preferences in its own R user data directory, and startup logs
-and diagnostics in its own R user cache directory. These files stay outside
-the repository:
-
-```r
-tools::R_user_dir("momo", "data")
-tools::R_user_dir("momo", "cache")
-tools::R_user_dir("mimi", "data")
-tools::R_user_dir("mimi", "cache")
-```
-
-For custom setups, `MOMO_DATA_DIR` / `MOMO_CACHE_DIR` and
-`MIMI_DATA_DIR` / `MIMI_CACHE_DIR` override these locations. Keep the cats'
-data directories separate.
-
-If a cat is not visible, open its launcher again. If R or ps is missing, follow
-the startup message and the relevant folder's README. On a managed computer,
-follow your organization's IT process if a launcher is blocked.
-
-## Checks
-
-With Rscript on PATH, run these commands from the repository root:
+| [MOMO-GPT](MOMO-GPT/README.md) | Original chat-app pet package; hosted by the chat application |
+| [MOMO-Offline](MOMO-Offline/README.md) | Current standalone MOMO executable, instructions and license notices |
+| [MIMI-Offline](MIMI-Offline/README.md) | Current standalone MIMI executable, instructions and license notices |
+| [Releases](Releases/README.md) | Release ZIPs, shared native source, artwork, checksums and publishing records |
 
 ```text
-Rscript --vanilla MOMO-Offline/tests/check_public_repository.R
-Rscript --vanilla MOMO-Offline/tests/check_companions.R
-Rscript --vanilla MOMO-Offline/run_momo.R --self-test
-Rscript --vanilla MIMI-Offline/run_mimi.R --self-test
-Rscript --vanilla MOMO-Offline/run_momo.R --smoke-test
-Rscript --vanilla MIMI-Offline/run_mimi.R --smoke-test
+MOMO-GPT/
+MOMO-Offline/
+  MOMO.exe
+MIMI-Offline/
+  MIMI.exe
+Releases/
+  2.0.0/
+    MOMO-Lite-2.0.0-windows-x64.zip
+    MIMI-Lite-2.0.0-windows-x64.zip
+    Source/
+      src/
+      scripts/
+      tests/
+      assets/aligned/
+      artwork/remastered/
 ```
 
-The checks cover the public layout and package contents, independent settings
-and instance signals, all 74 animation frames at four sizes, cursor directions,
-screen bounds and real-window rendering. Reports stay in each cat's cache.
+Old installers, duplicate downloads and trial builds are not part of the
+current project. The [v1.0.0 source](https://github.com/shanlong-who/MOMO/tree/v1.0.0)
+and Git history retain the older R editions and their portable build tools.
+No local Archive folder is needed to run, build, test or package Lite 2.0.0.
 
-## Artwork and license
+## Source and validation
 
-Both cats' sprite artwork was created with an AI image-generation tool.
-MIMI's appearance was inspired by a supplied cat photograph, using MOMO's atlas
-as the motion template. The photograph is not included. MIMI's generation
-prompts are in [MIMI-Offline/artwork-prompt.txt](MIMI-Offline/artwork-prompt.txt).
+The current application uses C++17, Win32 and Windows GDI+.
+[Source and build instructions](Releases/2.0.0/Source/README.md) cover both cats.
+R is used for development scripts only; it is not required by the finished EXEs.
+The source includes the final atlases, icons, artwork, tests and packaging script.
 
-The chat-app ZIP keeps the original manifest and animation sheet. Local build
-reports and personal paths have been removed from the public package.
-The source code and included generated artwork use the [MIT License](LICENSE).
+The [release validation](Releases/2.0.0/RELEASE-VALIDATION.txt) covers all 148
+animation frames at four sizes, native windows, actions, settings, simultaneous
+cats, repeated launches and relocated executables. The GitHub Windows workflow
+checks the committed ZIP/EXE checksums and runs their native rendering tests.
+It does not replace the full local source build and application test suite.
 
-</details>
-
+Code and generated artwork use the [MIT License](LICENSE). Each package includes
+the compiler runtime notices and applicable license texts.

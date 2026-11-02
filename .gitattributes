@@ -5,3 +5,10 @@
 *.png binary
 *.ico binary
 *.zip binary
+*.exe binary
+*.webp binary
+*.cpp text eol=lf
+*.yml text eol=lf
+
+# Preserve the released source and artwork snapshot byte for byte.
+Releases/2.0.0/Source/** -text

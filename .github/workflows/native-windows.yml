@@ -1,0 +1,56 @@
+name: Native Windows release checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: windows-2022
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Verify packages and native rendering
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $releaseRoot = Join-Path $env:GITHUB_WORKSPACE 'Releases/2.0.0'
+          foreach ($line in Get-Content -LiteralPath (Join-Path $releaseRoot 'SHA256SUMS.txt')) {
+            $parts = $line -split '\s+', 2
+            $actual = (Get-FileHash -LiteralPath (Join-Path $releaseRoot $parts[1]) -Algorithm SHA256).Hash
+            if ($actual -ne $parts[0]) { throw "Release checksum mismatch: $($parts[1])" }
+          }
+          $validationRoot = Join-Path $env:RUNNER_TEMP 'momo-native-validation'
+          New-Item -ItemType Directory -Path $validationRoot | Out-Null
+          foreach ($pet in @('MOMO', 'MIMI')) {
+            $petRoot = Join-Path $env:GITHUB_WORKSPACE ($pet + '-Offline')
+            $exe = Join-Path $petRoot ($pet + '.exe')
+            $expected = ((Get-Content -LiteralPath (Join-Path $petRoot 'SHA256SUMS.txt')) -split '\s+')[0]
+            if ((Get-FileHash -LiteralPath $exe -Algorithm SHA256).Hash -ne $expected) {
+              throw "Executable checksum mismatch: $pet"
+            }
+            $extractedRoot = Join-Path $validationRoot $pet
+            Expand-Archive -LiteralPath (Join-Path $releaseRoot ($pet + '-Lite-2.0.0-windows-x64.zip')) -DestinationPath $extractedRoot
+            $extractedExe = Join-Path $extractedRoot ($pet + '-Lite-2.0.0/' + $pet + '.exe')
+            if ((Get-FileHash -LiteralPath $extractedExe -Algorithm SHA256).Hash -ne $expected) {
+              throw "Packaged executable mismatch: $pet"
+            }
+            foreach ($test in @('self-test', 'smoke-test')) {
+              $report = Join-Path $validationRoot ($pet + '-' + $test + '.txt')
+              $arguments = @('--' + $test, ('"{0}"' -f $report))
+              $process = Start-Process -FilePath $exe -ArgumentList $arguments -WindowStyle Hidden -PassThru
+              if (-not $process.WaitForExit(20000)) { $process.Kill(); throw "Test timed out: $pet $test" }
+              $expectedLines = if ($test -eq 'self-test') { 4 } else { 2 }
+              if ($process.ExitCode -ne 0 -or -not (Test-Path -LiteralPath $report)) { throw "Test failed: $pet $test" }
+              $lines = @(Get-Content -LiteralPath $report)
+              if ($lines.Count -ne $expectedLines -or @($lines | Where-Object { -not $_.StartsWith('PASS:') }).Count) {
+                throw "Unexpected test report: $pet $test"
+              }
+              $lines
+            }
+          }

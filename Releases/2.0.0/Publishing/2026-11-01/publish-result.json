@@ -1,0 +1,35 @@
+{
+  "repository": "shanlong-who/MOMO",
+  "release": "https://github.com/shanlong-who/MOMO/releases/tag/v2.0.0",
+  "tag": "v2.0.0",
+  "latest": true,
+  "published_at": "2026-11-01T09:26:49Z",
+  "readme_commit": "9d43019363935b41e1f2f1beb801d05837f959e6",
+  "old_windows_zips_retired": true,
+  "assets": [
+    {
+      "name": "MIMI-Lite-2.0.0-windows-x64.zip",
+      "size": 6495603,
+      "sha256": "sha256:18f1919d4e18ed9bfbd364b068c9d6fa66aa552911a2e3a6f6d3658b35509119",
+      "url": "https://github.com/shanlong-who/MOMO/releases/download/v2.0.0/MIMI-Lite-2.0.0-windows-x64.zip"
+    },
+    {
+      "name": "MOMO-Lite-2.0.0-windows-x64.zip",
+      "size": 6618562,
+      "sha256": "sha256:0dcda44dc476680860a035274be80aeda3e94d66329949ba274e4f6bf74c96d4",
+      "url": "https://github.com/shanlong-who/MOMO/releases/download/v2.0.0/MOMO-Lite-2.0.0-windows-x64.zip"
+    },
+    {
+      "name": "RELEASE-VALIDATION.txt",
+      "size": 1202,
+      "sha256": "sha256:727e21e2e4a36c9f56c8dc88393156961521429a9222f0f042af16d5b380b5a3",
+      "url": "https://github.com/shanlong-who/MOMO/releases/download/v2.0.0/RELEASE-VALIDATION.txt"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "size": 198,
+      "sha256": "sha256:dd65a81fd721a9e1c3cef3562b3596bd7f1df826e787c4a8aebf1f36971d5c0c",
+      "url": "https://github.com/shanlong-who/MOMO/releases/download/v2.0.0/SHA256SUMS.txt"
+    }
+  ]
+}

@@ -31,4 +31,19 @@ maintenance/
 .env.*
 
 # The sanitized chat-app pet package is a public source deliverable.
-!MOMO-ChatGPT/momo-pet-v2.zip
+!MOMO-GPT/momo-pet-v2.zip
+
+# Current published packages; other local builds stay out of Git.
+!Releases/2.0.0/MOMO-Lite-2.0.0-windows-x64.zip
+!Releases/2.0.0/MIMI-Lite-2.0.0-windows-x64.zip
+*.exe
+!MOMO-Offline/MOMO.exe
+!MIMI-Offline/MIMI.exe
+*.dll
+*.o
+*.obj
+**/build/
+**/validation/
+**/release/
+**/assets/rebuilt/
+/Archive/

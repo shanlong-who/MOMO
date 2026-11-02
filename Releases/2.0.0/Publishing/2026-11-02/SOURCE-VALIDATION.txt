@@ -1,0 +1,7 @@
+PASS: both EXEs rebuilt from the organized source with hashes identical to the published Lite 2.0.0 executables.
+MOMO.exe SHA256: a9ed951e42588dde633d9c940af66e9d3e7cec557e4e1070259b0a51ae9778a8
+MIMI.exe SHA256: b1e27552e8c4d6be40e29523ffa8f19dd060ed514a8ee107a74fcdace0d506f5
+PASS: all 13 existing application tests passed against the rebuilt EXEs.
+PASS: packaging succeeded using PACKAGE-SIZES.csv without reading an old installer.
+PASS: public source and assets match the local current source.
+PASS: repository documentation links resolve and R scripts and workflow YAML parse.

@@ -1,0 +1,13 @@
+PASS: MOMO embedded frames, alpha, sizes, directions and screen bounds.
+PASS: MOMO all frames and sizes in a real transparent native window.
+PASS: MOMO single-instance launch and home request from relocated EXE alone.
+PASS: MOMO five actions, resize, pause, wandering, cursor tracking and topmost settings.
+PASS: MIMI embedded frames, alpha, sizes, directions and screen bounds.
+PASS: MIMI all frames and sizes in a real transparent native window.
+PASS: MIMI single-instance launch and home request from relocated EXE alone.
+PASS: MIMI five actions, resize, pause, wandering, cursor tracking and topmost settings.
+PASS: MOMO and MIMI run concurrently with separate settings and instance locks.
+PASS: MOMO clean exit and preference recovery; paused working set 38.4 MiB.
+PASS: MIMI clean exit and preference recovery; paused working set 38.1 MiB.
+PASS: EXEs run from paths with spaces, Chinese, ampersand and percent characters, without external assets.
+PASS: Runtime tests use a system-only PATH, invalid R paths and unusable HTTP/HTTPS proxies.
