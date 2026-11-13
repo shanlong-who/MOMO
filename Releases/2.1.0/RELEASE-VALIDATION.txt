@@ -1,0 +1,15 @@
+MOMO, MIMI and Dragon collection 2.1.0 - distribution validation
+Prepared on 2026-11-13 (Asia/Manila).
+
+PASS: All six ZIPs match their existing recorded SHA-256 values.
+PASS: No executable, artwork, animation or distribution ZIP was rebuilt or modified.
+PASS: MOMO GPT extracts successfully; manifest, transparent v2 sheet and all package files match the approved folder.
+PASS: MOMO Offline extracts successfully; packaged EXE matches the current tested project EXE.
+PASS: MIMI GPT extracts successfully; manifest, transparent v2 sheet and all package files match the approved folder.
+PASS: MIMI Offline extracts successfully; packaged EXE matches the current tested project EXE.
+PASS: Dragon GPT extracts successfully; manifest, transparent v2 sheet and all package files match the approved folder.
+PASS: Dragon Offline extracts successfully; packaged EXE matches the current tested project EXE.
+
+This release check verifies distribution integrity and package extraction.
+Previously recorded native application tests remain in the repository and packages.
+The collection version is 2.1.0; the native applications retain internal version 2.0.0.

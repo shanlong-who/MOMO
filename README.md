@@ -7,6 +7,13 @@ no R, RStudio, .NET installation or internet connection.
 
 ![MOMO and MIMI](Releases/2.0.0/MOMO-MIMI-preview.png)
 
+## Download the collection
+
+The [v2.1.0 Release](https://github.com/shanlong-who/MOMO/releases/tag/v2.1.0)
+provides all six GPT and Offline ZIPs for MOMO, MIMI and Dragon, plus combined
+[SHA-256 checksums](https://github.com/shanlong-who/MOMO/releases/download/v2.1.0/SHA256SUMS.txt)
+and a validation report. Native executable versions remain 2.0.0.
+
 ## Choose a companion
 
 | Character | Desktop chat pet | Standalone Windows application |

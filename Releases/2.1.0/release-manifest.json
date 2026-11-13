@@ -1,0 +1,68 @@
+{
+  "collection_version": "2.1.0",
+  "tag": "v2.1.0",
+  "packages": [
+    {
+      "character": "MOMO",
+      "edition": "GPT",
+      "source": "MOMO-GPT/momo-pet-v2.zip",
+      "expected": "021079c5304977638824d14bf44e6274d54dc98063272556421fec295815eb1b",
+      "filename": "momo-pet-v2.zip",
+      "sha256": "021079c5304977638824d14bf44e6274d54dc98063272556421fec295815eb1b",
+      "bytes": 15523754,
+      "component_version": "sprite v2"
+    },
+    {
+      "character": "MOMO",
+      "edition": "Offline",
+      "source": "Releases/2.0.0/MOMO-Lite-2.0.0-windows-x64.zip",
+      "expected": "0dcda44dc476680860a035274be80aeda3e94d66329949ba274e4f6bf74c96d4",
+      "filename": "MOMO-Lite-2.0.0-windows-x64.zip",
+      "sha256": "0dcda44dc476680860a035274be80aeda3e94d66329949ba274e4f6bf74c96d4",
+      "bytes": 6618562,
+      "component_version": "2.0.0"
+    },
+    {
+      "character": "MIMI",
+      "edition": "GPT",
+      "source": "MIMI-GPT/mimi-pet-v2.zip",
+      "expected": "f6fbc60630ebde28d0baea0c0c7dde60c3ea02a92be0ccf4322dfba87fc21a29",
+      "filename": "mimi-pet-v2.zip",
+      "sha256": "f6fbc60630ebde28d0baea0c0c7dde60c3ea02a92be0ccf4322dfba87fc21a29",
+      "bytes": 15376249,
+      "component_version": "sprite v2"
+    },
+    {
+      "character": "MIMI",
+      "edition": "Offline",
+      "source": "Releases/2.0.0/MIMI-Lite-2.0.0-windows-x64.zip",
+      "expected": "18f1919d4e18ed9bfbd364b068c9d6fa66aa552911a2e3a6f6d3658b35509119",
+      "filename": "MIMI-Lite-2.0.0-windows-x64.zip",
+      "sha256": "18f1919d4e18ed9bfbd364b068c9d6fa66aa552911a2e3a6f6d3658b35509119",
+      "bytes": 6495603,
+      "component_version": "2.0.0"
+    },
+    {
+      "character": "Dragon",
+      "edition": "GPT",
+      "source": "Dragon-GPT/dragon-pet-v2.zip",
+      "expected": "f858a1f346714914d702afc16bafb0d91cbee9d2cfecf81c1c39f5a04ec5f075",
+      "filename": "dragon-pet-v2.zip",
+      "sha256": "f858a1f346714914d702afc16bafb0d91cbee9d2cfecf81c1c39f5a04ec5f075",
+      "bytes": 8423712,
+      "component_version": "sprite v2"
+    },
+    {
+      "character": "Dragon",
+      "edition": "Offline",
+      "source": "archive/supporting-files-2026-11-13/Dragon-Offline-windows-x64.zip",
+      "expected": "532e54f22d25218ca845c988bb2432ba589f903c2237cbbfc267ef3d3f609e52",
+      "filename": "Dragon-Offline-windows-x64.zip",
+      "sha256": "532e54f22d25218ca845c988bb2432ba589f903c2237cbbfc267ef3d3f609e52",
+      "bytes": 2452823,
+      "component_version": "2.0.0"
+    }
+  ],
+  "checksum_file": "SHA256SUMS.txt",
+  "validation_file": "RELEASE-VALIDATION.txt"
+}

@@ -1,6 +1,16 @@
-# MOMO and MIMI releases
+# Companion releases
 
-The current release is **Lite 2.0.0**, published on 2026-11-01.
+The current collection release is **2.1.0**, with GPT and Offline ZIPs for
+MOMO, MIMI and Dragon. The native applications retain internal version 2.0.0.
+
+- [Download the combined GitHub Release](https://github.com/shanlong-who/MOMO/releases/tag/v2.1.0)
+- [Six-package download index](2.1.0/README.md)
+- [Combined checksums](2.1.0/SHA256SUMS.txt)
+- [Distribution validation](2.1.0/RELEASE-VALIDATION.txt)
+
+## Earlier MOMO and MIMI Lite release
+
+**Lite 2.0.0** was published on 2026-11-01. Its files are retained unchanged.
 
 - [MOMO release ZIP](2.0.0/MOMO-Lite-2.0.0-windows-x64.zip)
 - [MIMI release ZIP](2.0.0/MIMI-Lite-2.0.0-windows-x64.zip)

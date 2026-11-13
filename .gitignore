@@ -65,3 +65,6 @@ maintenance/
 .RData
 .Ruserdata
 .Rproj.user/
+
+# Combined companion collection release assets.
+!Releases/2.1.0/*.zip
