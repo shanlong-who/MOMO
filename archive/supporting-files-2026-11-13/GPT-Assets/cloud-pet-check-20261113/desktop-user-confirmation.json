@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-13",
+  "source": "User's direct visual check in the desktop app",
+  "pets": ["Momo", "Momo Collar", "Mimi"],
+  "appearances_correct": true,
+  "animations_normal": true,
+  "switching_normal": true,
+  "user_confirmation": "All three are correct; animation and switching are normal."
+}

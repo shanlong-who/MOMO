@@ -1,0 +1,130 @@
+{
+  "Workspace": "C:\\Users\\User\\OneDrive - World Health Organization\\Documents\\CAT\\MOMO",
+  "AllowedTopLevel": [
+    "Releases",
+    "archive",
+    "Dragon-GPT",
+    "Dragon-Offline",
+    "MOMO-GPT",
+    "MOMO-Offline",
+    "MIMI-GPT",
+    "MIMI-Offline"
+  ],
+  "Delete": [
+    {
+      "Path": "GPT-Assets\\build",
+      "Files": 130,
+      "Bytes": 174713010.0
+    },
+    {
+      "Path": "GPT-Assets\\work",
+      "Files": 133,
+      "Bytes": 84935798.0
+    },
+    {
+      "Path": "GPT-Assets\\idle-frames",
+      "Files": 16,
+      "Bytes": 859363.0
+    },
+    {
+      "Path": "GPT-Assets\\artwork",
+      "Files": 4,
+      "Bytes": 5270372.0
+    },
+    {
+      "Path": "Dragon-v2-build",
+      "Files": 0,
+      "Bytes": null
+    },
+    {
+      "Path": "Dragon-Source\\qa\\build-library",
+      "Files": 0,
+      "Bytes": null
+    },
+    {
+      "Path": "Dragon-Source\\qa\\source-package-check",
+      "Files": 52,
+      "Bytes": 34869965.0
+    },
+    {
+      "Path": "Dragon-Source\\qa\\source-package-check-v2",
+      "Files": 65,
+      "Bytes": 40429030.0
+    },
+    {
+      "Path": "Dragon-Source\\qa\\video-frames",
+      "Files": 57,
+      "Bytes": 3333642.0
+    },
+    {
+      "Path": "Dragon-Source\\assets\\dragon-resources.o",
+      "Files": 1,
+      "Bytes": 2407120.0
+    },
+    {
+      "Path": "Dragon-Source\\qa\\package-20261113-100728",
+      "Files": 35,
+      "Bytes": 11285017.0
+    },
+    {
+      "Path": "Dragon-Source\\qa\\package-20261113-101109",
+      "Files": 35,
+      "Bytes": 11285083.0
+    },
+    {
+      "Path": "Dragon-Source\\qa\\package-20261113-101153",
+      "Files": 35,
+      "Bytes": 11285083.0
+    }
+  ],
+  "Move": [
+    {
+      "Source": "C:\\Users\\User\\OneDrive - World Health Organization\\Documents\\CAT\\MOMO\\Dragon-Design",
+      "Destination": "C:\\Users\\User\\OneDrive - World Health Organization\\Documents\\CAT\\MOMO\\archive\\supporting-files-2026-11-13\\Dragon-Design"
+    },
+    {
+      "Source": "C:\\Users\\User\\OneDrive - World Health Organization\\Documents\\CAT\\MOMO\\Dragon-Source",
+      "Destination": "C:\\Users\\User\\OneDrive - World Health Organization\\Documents\\CAT\\MOMO\\archive\\supporting-files-2026-11-13\\Dragon-Source"
+    },
+    {
+      "Source": "C:\\Users\\User\\OneDrive - World Health Organization\\Documents\\CAT\\MOMO\\Dragon-v2-build",
+      "Destination": "C:\\Users\\User\\OneDrive - World Health Organization\\Documents\\CAT\\MOMO\\archive\\supporting-files-2026-11-13\\Dragon-v2-build"
+    },
+    {
+      "Source": "C:\\Users\\User\\OneDrive - World Health Organization\\Documents\\CAT\\MOMO\\GPT-Assets",
+      "Destination": "C:\\Users\\User\\OneDrive - World Health Organization\\Documents\\CAT\\MOMO\\archive\\supporting-files-2026-11-13\\GPT-Assets"
+    },
+    {
+      "Source": "C:\\Users\\User\\OneDrive - World Health Organization\\Documents\\CAT\\MOMO\\Dragon-2.0-preview.gif",
+      "Destination": "C:\\Users\\User\\OneDrive - World Health Organization\\Documents\\CAT\\MOMO\\archive\\supporting-files-2026-11-13\\Dragon-2.0-preview.gif"
+    },
+    {
+      "Source": "C:\\Users\\User\\OneDrive - World Health Organization\\Documents\\CAT\\MOMO\\Dragon-comparison.png",
+      "Destination": "C:\\Users\\User\\OneDrive - World Health Organization\\Documents\\CAT\\MOMO\\archive\\supporting-files-2026-11-13\\Dragon-comparison.png"
+    },
+    {
+      "Source": "C:\\Users\\User\\OneDrive - World Health Organization\\Documents\\CAT\\MOMO\\Dragon-Offline-windows-x64.zip",
+      "Destination": "C:\\Users\\User\\OneDrive - World Health Organization\\Documents\\CAT\\MOMO\\archive\\supporting-files-2026-11-13\\Dragon-Offline-windows-x64.zip"
+    },
+    {
+      "Source": "C:\\Users\\User\\OneDrive - World Health Organization\\Documents\\CAT\\MOMO\\Dragon-preview.gif",
+      "Destination": "C:\\Users\\User\\OneDrive - World Health Organization\\Documents\\CAT\\MOMO\\archive\\supporting-files-2026-11-13\\Dragon-preview.gif"
+    },
+    {
+      "Source": "C:\\Users\\User\\OneDrive - World Health Organization\\Documents\\CAT\\MOMO\\Dragon-preview.png",
+      "Destination": "C:\\Users\\User\\OneDrive - World Health Organization\\Documents\\CAT\\MOMO\\archive\\supporting-files-2026-11-13\\Dragon-preview.png"
+    },
+    {
+      "Source": "C:\\Users\\User\\OneDrive - World Health Organization\\Documents\\CAT\\MOMO\\Dragon-RELEASE-VALIDATION.txt",
+      "Destination": "C:\\Users\\User\\OneDrive - World Health Organization\\Documents\\CAT\\MOMO\\archive\\supporting-files-2026-11-13\\Dragon-RELEASE-VALIDATION.txt"
+    },
+    {
+      "Source": "C:\\Users\\User\\OneDrive - World Health Organization\\Documents\\CAT\\MOMO\\Dragon-SHA256SUMS.txt",
+      "Destination": "C:\\Users\\User\\OneDrive - World Health Organization\\Documents\\CAT\\MOMO\\archive\\supporting-files-2026-11-13\\Dragon-SHA256SUMS.txt"
+    },
+    {
+      "Source": "C:\\Users\\User\\OneDrive - World Health Organization\\Documents\\CAT\\MOMO\\Dragon-Source.zip",
+      "Destination": "C:\\Users\\User\\OneDrive - World Health Organization\\Documents\\CAT\\MOMO\\archive\\supporting-files-2026-11-13\\Dragon-Source.zip"
+    }
+  ]
+}

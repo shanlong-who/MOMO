@@ -1,0 +1,136 @@
+{
+  "old_cloud_momo_images_are_identical": true,
+  "old_cloud_sha256": "c4f3f56af54b2ce88390b3b133bb30653b405752cc40d9cecc1c1a9b0eba74f3",
+  "pets": {
+    "momo": {
+      "installed_file_matches_approved_package": true,
+      "sha256": "ef6dc7f0d7a680fb1a4a79765a157e8f75e03f97a4570748f2bc085a1adb6927",
+      "populated_cells": 74,
+      "unused_cells": 14,
+      "edge_clipping": false,
+      "state_frame_variation": [
+        {
+          "state": "idle",
+          "populated_cells": 7,
+          "distinct_frames": 7
+        },
+        {
+          "state": "running-right",
+          "populated_cells": 8,
+          "distinct_frames": 8
+        },
+        {
+          "state": "running-left",
+          "populated_cells": 8,
+          "distinct_frames": 8
+        },
+        {
+          "state": "waving",
+          "populated_cells": 4,
+          "distinct_frames": 4
+        },
+        {
+          "state": "jumping",
+          "populated_cells": 5,
+          "distinct_frames": 5
+        },
+        {
+          "state": "failed",
+          "populated_cells": 8,
+          "distinct_frames": 8
+        },
+        {
+          "state": "waiting",
+          "populated_cells": 6,
+          "distinct_frames": 6
+        },
+        {
+          "state": "running",
+          "populated_cells": 6,
+          "distinct_frames": 6
+        },
+        {
+          "state": "review",
+          "populated_cells": 6,
+          "distinct_frames": 6
+        },
+        {
+          "state": "look-first-half",
+          "populated_cells": 8,
+          "distinct_frames": 8
+        },
+        {
+          "state": "look-second-half",
+          "populated_cells": 8,
+          "distinct_frames": 8
+        }
+      ],
+      "runtime_switch": "Requires desktop observation; local files cannot establish cloud selection"
+    },
+    "mimi": {
+      "installed_file_matches_approved_package": true,
+      "sha256": "43d899268d4cb1e0e9045c8d7618edf3cff18e4e8b831adc3f0968875cc33496",
+      "populated_cells": 74,
+      "unused_cells": 14,
+      "edge_clipping": false,
+      "state_frame_variation": [
+        {
+          "state": "idle",
+          "populated_cells": 7,
+          "distinct_frames": 7
+        },
+        {
+          "state": "running-right",
+          "populated_cells": 8,
+          "distinct_frames": 8
+        },
+        {
+          "state": "running-left",
+          "populated_cells": 8,
+          "distinct_frames": 8
+        },
+        {
+          "state": "waving",
+          "populated_cells": 4,
+          "distinct_frames": 4
+        },
+        {
+          "state": "jumping",
+          "populated_cells": 5,
+          "distinct_frames": 5
+        },
+        {
+          "state": "failed",
+          "populated_cells": 8,
+          "distinct_frames": 8
+        },
+        {
+          "state": "waiting",
+          "populated_cells": 6,
+          "distinct_frames": 6
+        },
+        {
+          "state": "running",
+          "populated_cells": 6,
+          "distinct_frames": 6
+        },
+        {
+          "state": "review",
+          "populated_cells": 6,
+          "distinct_frames": 6
+        },
+        {
+          "state": "look-first-half",
+          "populated_cells": 8,
+          "distinct_frames": 8
+        },
+        {
+          "state": "look-second-half",
+          "populated_cells": 8,
+          "distinct_frames": 8
+        }
+      ],
+      "runtime_switch": "Requires desktop observation; local files cannot establish cloud selection"
+    }
+  }
+}

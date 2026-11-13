@@ -1,0 +1,175 @@
+{
+  "ok": true,
+  "top_level_folders": ["Releases", "archive", "Dragon-GPT", "Dragon-Offline", "MOMO-GPT", "MOMO-Offline", "MIMI-GPT", "MIMI-Offline"],
+  "checksum_checks": [
+    {
+      "path": "Releases/2.0.0/MIMI-Lite-2.0.0-windows-x64.zip",
+      "sha256": "18f1919d4e18ed9bfbd364b068c9d6fa66aa552911a2e3a6f6d3658b35509119"
+    },
+    {
+      "path": "Releases/2.0.0/MOMO-Lite-2.0.0-windows-x64.zip",
+      "sha256": "0dcda44dc476680860a035274be80aeda3e94d66329949ba274e4f6bf74c96d4"
+    },
+    {
+      "path": "MOMO-Offline/MOMO.exe",
+      "sha256": "a9ed951e42588dde633d9c940af66e9d3e7cec557e4e1070259b0a51ae9778a8"
+    },
+    {
+      "path": "MIMI-Offline/MIMI.exe",
+      "sha256": "b1e27552e8c4d6be40e29523ffa8f19dd060ed514a8ee107a74fcdace0d506f5"
+    },
+    {
+      "path": "Dragon-Offline/Dragon-Offline.exe",
+      "sha256": "860047e37628a1b2eea79ee2afea60f0c4baaf87e2e2cf1724a39efbd5e85c88"
+    },
+    {
+      "path": "MOMO-GPT/momo-pet-v2.zip",
+      "sha256": "021079c5304977638824d14bf44e6274d54dc98063272556421fec295815eb1b"
+    },
+    {
+      "path": "MIMI-GPT/mimi-pet-v2.zip",
+      "sha256": "f6fbc60630ebde28d0baea0c0c7dde60c3ea02a92be0ccf4322dfba87fc21a29"
+    }
+  ],
+  "gpt_manifests_and_archives": "passed for all three packages",
+  "active_readme_links": [
+    {
+      "readme": "Releases/README.md",
+      "target": "2.0.0/MOMO-Lite-2.0.0-windows-x64.zip"
+    },
+    {
+      "readme": "Releases/README.md",
+      "target": "2.0.0/MIMI-Lite-2.0.0-windows-x64.zip"
+    },
+    {
+      "readme": "Releases/README.md",
+      "target": "2.0.0/SHA256SUMS.txt"
+    },
+    {
+      "readme": "Releases/README.md",
+      "target": "2.0.0/RELEASE-VALIDATION.txt"
+    },
+    {
+      "readme": "Releases/README.md",
+      "target": "2.0.0/Source/README.md"
+    },
+    {
+      "readme": "Releases/README.md",
+      "target": "../archive/supporting-files-2026-11-13/"
+    },
+    {
+      "readme": "archive/README.md",
+      "target": "supporting-files-2026-11-13/"
+    },
+    {
+      "readme": "archive/README.md",
+      "target": "organization-2026-11-13/"
+    },
+    {
+      "readme": "archive/README.md",
+      "target": "dragon-before-v2-2026-11-13/"
+    },
+    {
+      "readme": "archive/README.md",
+      "target": "codex-pets-before-20261113-093238/momo/"
+    },
+    {
+      "readme": "archive/README.md",
+      "target": "cloud-momo-before-update-20261113/"
+    },
+    {
+      "readme": "Dragon-GPT/README.md",
+      "target": "../archive/supporting-files-2026-11-13/Dragon-Source/README.md"
+    },
+    {
+      "readme": "Dragon-GPT/README.md",
+      "target": "../archive/supporting-files-2026-11-13/Dragon-Source.zip"
+    },
+    {
+      "readme": "Dragon-Offline/README.md",
+      "target": "../archive/supporting-files-2026-11-13/Dragon-Source/README.md"
+    },
+    {
+      "readme": "Dragon-Offline/README.md",
+      "target": "../archive/supporting-files-2026-11-13/Dragon-Source.zip"
+    },
+    {
+      "readme": "MOMO-GPT/README.md",
+      "target": "momo-pet-v2.zip"
+    },
+    {
+      "readme": "MOMO-GPT/README.md",
+      "target": "momo/previews/"
+    },
+    {
+      "readme": "MOMO-GPT/README.md",
+      "target": "momo/validation.json"
+    },
+    {
+      "readme": "MOMO-GPT/README.md",
+      "target": "../archive/momo-pet-v2.zip"
+    },
+    {
+      "readme": "MOMO-GPT/README.md",
+      "target": "../archive/supporting-files-2026-11-13/GPT-Assets/README.md"
+    },
+    {
+      "readme": "MOMO-Offline/README.md",
+      "target": "../Releases/2.0.0/MOMO-Lite-2.0.0-windows-x64.zip"
+    },
+    {
+      "readme": "MOMO-Offline/README.md",
+      "target": "../Releases/2.0.0/Source/README.md"
+    },
+    {
+      "readme": "MOMO-Offline/README.md",
+      "target": "SHA256SUMS.txt"
+    },
+    {
+      "readme": "MOMO-Offline/README.md",
+      "target": "TEST-RESULTS.txt"
+    },
+    {
+      "readme": "MOMO-Offline/README.md",
+      "target": "THIRD-PARTY-NOTICES.txt"
+    },
+    {
+      "readme": "MIMI-GPT/README.md",
+      "target": "mimi-pet-v2.zip"
+    },
+    {
+      "readme": "MIMI-GPT/README.md",
+      "target": "mimi/previews/"
+    },
+    {
+      "readme": "MIMI-GPT/README.md",
+      "target": "mimi/validation.json"
+    },
+    {
+      "readme": "MIMI-GPT/README.md",
+      "target": "../archive/supporting-files-2026-11-13/GPT-Assets/README.md"
+    },
+    {
+      "readme": "MIMI-Offline/README.md",
+      "target": "../Releases/2.0.0/MIMI-Lite-2.0.0-windows-x64.zip"
+    },
+    {
+      "readme": "MIMI-Offline/README.md",
+      "target": "../Releases/2.0.0/Source/README.md"
+    },
+    {
+      "readme": "MIMI-Offline/README.md",
+      "target": "SHA256SUMS.txt"
+    },
+    {
+      "readme": "MIMI-Offline/README.md",
+      "target": "TEST-RESULTS.txt"
+    },
+    {
+      "readme": "MIMI-Offline/README.md",
+      "target": "THIRD-PARTY-NOTICES.txt"
+    }
+  ],
+  "parsed_r_scripts": 40,
+  "every_file_below_100_mib": true
+}

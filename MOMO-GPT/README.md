@@ -1,26 +1,30 @@
-# MOMO for ChatGPT
+# MOMO for Codex
 
-This folder contains the original chat-app version of MOMO: a silver tabby cat
-with amber eyes and a teal collar.
+`momo-pet-v2.zip` is the current local pet package. The unpacked package is in
+`momo/`, with its original pet ID, display name and v2 manifest format.
 
-[momo-pet-v2.zip](momo-pet-v2.zip) contains a `momo` folder with:
+The artwork comes directly from MOMO-Offline 2.0.0, which already has no
+collar or pendant. The original face, head angle, open-mouth expression,
+animation order and sixteen look poses are preserved. All 74 source cells
+use the same resize and padding to fit the original GPT package geometry.
+No regenerated idle artwork is included.
 
-- `pet.json`: the original v2 pet manifest.
-- `spritesheet.webp`: the original 1536 × 2288 animation atlas.
-- `README.md`: a short package guide.
-- `LICENSE`: the MIT license.
+- [Current package](momo-pet-v2.zip)
+- [Animation previews](momo/previews/)
+- [Source preservation checks](momo/validation.json)
+- [Original unmodified export](../archive/momo-pet-v2.zip)
+- [Archived scripts and artwork decision](../archive/supporting-files-2026-11-13/GPT-Assets/README.md)
 
-These are the assets for the chat-app pet version. The chat application hosts
-the pet; this ZIP is not an independent Windows executable or R application.
-Use the package with the chat-app pet workflow that supports this v2 format.
+The desktop account keeps two existing MOMO records: **Momo** uses the
+collar-free artwork in this package, and **Momo Collar** keeps the original
+collared artwork. Their appearance, animation and switching were checked
+in the desktop app. Updating local files alone does not replace artwork in
+an account record that the app has already migrated.
 
-Local build reports and personal paths are omitted from this public export.
-The original pet manifest and animation artwork are preserved unchanged.
+For a standalone Windows desktop companion, run `MOMO.exe` in the sibling
+`MOMO-Offline` folder or `MIMI.exe` in `MIMI-Offline`. These are the native
+Lite 2.0.0 editions and do not require R. Their release ZIPs are in
+`../Releases/2.0.0`; [older public editions](https://github.com/shanlong-who/MOMO/tree/v1.0.0)
+remain available in GitHub history.
 
-For a standalone Windows desktop cat, choose
-[MOMO-Offline](../MOMO-Offline/README.md) or
-[MIMI-Offline](../MIMI-Offline/README.md). Both are native Lite 2.0.0 applications
-and run without R or an internet connection.
-
-This is a personal project, made just for fun. See the [project README](../README.md)
-and [MIT License](../LICENSE).
+This is a personal project, made just for fun.

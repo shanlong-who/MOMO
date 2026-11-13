@@ -1,0 +1,10 @@
+library(magick)
+
+old <- image_read("artwork/previous-version-preview.png")
+new <- image_read("assets/preview.png")
+board <- image_blank(384, 236, color = "#eeeaf3")
+board <- image_annotate(board, "Dragon 1.0", size = 14, font = "Arial", color = "#40364e", location = "+58+3")
+board <- image_annotate(board, "Dragon 2.0", size = 14, font = "Arial", color = "#40364e", location = "+250+3")
+board <- image_composite(board, old, operator = "over", offset = "+0+24")
+board <- image_composite(board, new, operator = "over", offset = "+192+24")
+image_write(board, "../Dragon-comparison.png")

@@ -1,0 +1,34 @@
+Dragon Offline 1.0.0
+
+Application code, adapted from MOMO and MIMI Lite 2.0.0
+Copyright (c) 2026 Shanlong Ding
+License: MIT. See LICENSE.
+
+Dragon artwork
+Generated from a reference image supplied by the user. Original reference
+artwork remains attributed to its respective creator. The source package
+records the generation brief and retains the supplied reference.
+
+GCC runtime libraries (GCC 14.2.0)
+The executables are compiled with GCC / MinGW-w64 and statically include
+compiler runtime code. GCC runtime libraries use GPL version 3 with the
+GCC Runtime Library Exception version 3.1.
+See licenses/GPL-3.txt and licenses/GCC-Runtime-Exception-3.1.txt.
+Upstream: https://gcc.gnu.org/
+Runtime exception source:
+https://github.com/gcc-mirror/gcc/blob/releases/gcc-14.2.0/COPYING.RUNTIME
+
+MinGW-w64
+MinGW-w64 runtime and header code retain their upstream notices and licenses.
+See licenses/MinGW-w64-COPYING.txt.
+Upstream: https://www.mingw-w64.org/
+License source: https://github.com/mingw-w64/mingw-w64/blob/master/COPYING
+
+Windows components
+Win32, GDI+, COM and Universal CRT are provided by Windows. No Windows DLLs
+are copied into these packages. The build records each executable's imported
+system DLLs in the validation files.
+
+Build tools
+R, Rtools, magick, png, processx, digest, ps and zip are development tools.
+They are not included in or needed by the released pet executables.

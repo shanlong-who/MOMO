@@ -1,0 +1,25 @@
+{
+  "review_scope": "Visual inspection of final encoded 192x208 cells, with independent blind cardinal review",
+  "cardinals_pass": true,
+  "blind_cardinals": {"A": "left", "B": "up", "C": "down", "D": "right", "matches_expected": true},
+  "directions": [
+    {"angle": 0, "expected": "up", "observed": "up", "verdict": "pass", "evidence": "Raised chin and upward nose; underside of jaw visible, eyes elevated."},
+    {"angle": 22.5, "expected": "up-right", "observed": "up-right", "verdict": "pass", "evidence": "Chin remains raised and nose shifts slightly screen-right."},
+    {"angle": 45, "expected": "up-right", "observed": "up-right", "verdict": "pass", "evidence": "Rightward face yaw with upward chin pitch and raised eye line."},
+    {"angle": 67.5, "expected": "up-right", "observed": "up-right", "verdict": "pass", "evidence": "Nose and visible eye project right while chin remains slightly raised."},
+    {"angle": 90, "expected": "right", "observed": "right", "verdict": "pass", "evidence": "Clear right profile; nose, eye and chin point screen-right."},
+    {"angle": 112.5, "expected": "down-right", "observed": "down-right", "verdict": "pass", "evidence": "Nose points right and head pitches below the right cardinal."},
+    {"angle": 135, "expected": "down-right", "observed": "down-right", "verdict": "warning", "evidence": "Bowed chin and lowered eyelids; slight rightward nose remains but horizontal component is subtle at pet size."},
+    {"angle": 157.5, "expected": "down-right", "observed": "down-right", "verdict": "warning", "evidence": "Strong downward pitch; slight right yaw near down cardinal is subtle at pet size."},
+    {"angle": 180, "expected": "down", "observed": "down", "verdict": "pass", "evidence": "Head bowed, crown and bangs visible, chin tucked toward chest; blind reviewer independently identified down."},
+    {"angle": 202.5, "expected": "down-left", "observed": "down-left", "verdict": "warning", "evidence": "Strong bowed head with subtle leftward nose and head yaw near the down cardinal."},
+    {"angle": 225, "expected": "down-left", "observed": "down-left", "verdict": "pass", "evidence": "Nose and visible face shift left while chin stays lowered."},
+    {"angle": 247.5, "expected": "down-left", "observed": "down-left", "verdict": "pass", "evidence": "Clear left-facing nose with modest downward chin pitch."},
+    {"angle": 270, "expected": "left", "observed": "left", "verdict": "pass", "evidence": "Clear left profile; nose and visible eye point left, independently recognized in blind review."},
+    {"angle": 292.5, "expected": "up-left", "observed": "up-left", "verdict": "pass", "evidence": "Leftward yaw and nose with chin rising above the left cardinal."},
+    {"angle": 315, "expected": "up-left", "observed": "up-left", "verdict": "pass", "evidence": "Nose points left and chin is visibly high with upward eye line."},
+    {"angle": 337.5, "expected": "up-left", "observed": "up-left", "verdict": "pass", "evidence": "Near-up chin pitch with a remaining slight screen-left nose direction."}
+  ],
+  "anchored_body": "Front-facing torso, dress slit, wing attachment and screen-right tail remain consistent. Measured lower-body horizontal spread is 0.31 pixels and baseline spread is zero pixels.",
+  "limitations": "Three near-down intermediate gazes have subtle horizontal components. Cardinal directions are unambiguous. The normal native tool window was not targetable by the desktop automation tool; the user stopped Computer Use with Escape. Automated native rendering and control tests completed separately."
+}

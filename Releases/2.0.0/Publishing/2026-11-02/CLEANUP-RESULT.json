@@ -1,0 +1,20 @@
+{
+  "Date": "2026-11-02",
+  "ArchiveRemoved": true,
+  "OriginalArchiveBytes": 879438208,
+  "RemovedBytesIncludingTemporaryBuilds": 1195800124.0,
+  "RemovedFilesIncludingTemporaryBuilds": 689,
+  "RemainingProjectBytes": 65772308.0,
+  "GitHubCommit": "6f4f2b723c8e54532765a4f35fe4a17be2ccf407",
+  "GitHubChecks": "success",
+  "DesktopShortcutsVerified": [
+    "猫猫",
+    "咪咪"
+  ],
+  "Folders": [
+    "MIMI-Offline",
+    "MOMO-GPT",
+    "MOMO-Offline",
+    "Releases"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "scope": "Descriptive encoded-pixel continuity and body-registration measurements",
+  "lower.body.x.range.pixels": 1.3609,
+  "baseline.range.pixels": 0,
+  "adjacent.mean.absolute.rgba.difference": [0.0186, 0.0161, 0.0113, 0.0161, 0.017, 0.0161, 0.0146, 0.0359, 0.0209, 0.0195, 0.0173, 0.0171, 0.0137, 0.0124, 0.0195, 0.0397],
+  "boundary.157.5.to.180": 0.0359,
+  "boundary.337.5.to.000": 0.0397
+}

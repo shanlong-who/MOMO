@@ -1,0 +1,67 @@
+# Local R sessions and IDE files
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+
+# Local launch shortcuts and runtime files
+*.lnk
+*.log
+*.rds
+state/
+verification/
+diagnostics/
+logs/
+*.request
+*.lock
+
+# Local overrides and generated distribution archives
+.Renviron
+.Rprofile
+*.zip
+*.tar.gz
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local recovery archives and machine-specific setup
+maintenance/
+*.bundle
+.env
+.env.*
+
+# The sanitized chat-app pet package is a public source deliverable.
+!MOMO-GPT/momo-pet-v2.zip
+
+# Current published packages; other local builds stay out of Git.
+!Releases/2.0.0/MOMO-Lite-2.0.0-windows-x64.zip
+!Releases/2.0.0/MIMI-Lite-2.0.0-windows-x64.zip
+*.exe
+!MOMO-Offline/MOMO.exe
+!MIMI-Offline/MIMI.exe
+*.dll
+*.o
+*.obj
+**/build/
+**/validation/
+**/release/
+**/assets/rebuilt/
+/Archive/
+
+# Publish the organized supporting-file archive and current pet packages.
+!/archive/
+!/archive/**
+!Dragon-GPT/dragon-pet-v2.zip
+!Dragon-Offline/Dragon-Offline.exe
+!MIMI-GPT/mimi-pet-v2.zip
+!Releases/2.0.0/Source/assets/aligned/components.dll
+
+# Keep local credentials and session state excluded from every folder.
+.env
+.env.*
+.Renviron
+.Rprofile
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/

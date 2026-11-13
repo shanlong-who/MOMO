@@ -1,0 +1,11 @@
+{
+  "state": "running",
+  "expected.frames": 6,
+  "connected.figures": 6,
+  "method": "connected component extraction with two-pixel edge retention",
+  "source": "artwork/rows/running.png",
+  "source.width": 1199,
+  "source.height": 1312,
+  "min.height": 604,
+  "max.height": 610
+}

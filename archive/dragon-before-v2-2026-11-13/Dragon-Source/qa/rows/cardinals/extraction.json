@@ -1,0 +1,11 @@
+{
+  "state": "cardinals",
+  "expected.frames": 4,
+  "connected.figures": 4,
+  "method": "connected component extraction with two-pixel edge retention",
+  "source": "artwork/rows/cardinals.png",
+  "source.width": 2172,
+  "source.height": 724,
+  "min.height": 702,
+  "max.height": 708
+}

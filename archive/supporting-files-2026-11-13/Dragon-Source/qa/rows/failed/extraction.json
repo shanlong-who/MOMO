@@ -1,0 +1,11 @@
+{
+  "state": "failed",
+  "expected.frames": 8,
+  "connected.figures": 8,
+  "method": "connected component extraction with two-pixel edge retention",
+  "source": "artwork/rows/failed.png",
+  "source.width": 1024,
+  "source.height": 1536,
+  "min.height": 587,
+  "max.height": 592
+}

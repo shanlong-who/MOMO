@@ -1,0 +1,2 @@
+PASS: 73 animation frames and four sizes shown using UpdateLayeredWindow.
+PASS: real native desktop window, per-pixel alpha and Windows event loop.

@@ -1,0 +1,4 @@
+PASS: all 73 embedded frames rendered at four sizes (292 frame checks).
+PASS: alpha coverage, premultiplied pixels, smooth edges and empty cell borders in every frame.
+PASS: cursor directions, negative-monitor bounds and oversized-window bounds.
+PASS: supported sizes and embedded atlas dimensions.

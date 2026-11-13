@@ -1,0 +1,15 @@
+{
+  "scope": "Previews use intended Offline cadence; the desktop host controls its own playback",
+  "states": ["Idle", "Glide right", "Glide left", "Hello", "Celebrate", "Concern and recovery", "Waiting", "Thinking", "Review"],
+  "frame.delays.centiseconds": [
+    [160, 50, 12, 12, 35, 90],
+    [22, 22, 22, 22, 22, 22, 22, 22],
+    [22, 22, 22, 22, 22, 22, 22, 22],
+    [30, 55, 40, 60],
+    [30, 30, 45, 35, 50],
+    [25, 35, 35, 45, 45, 45, 40, 50],
+    [50, 65, 40, 50, 55, 60],
+    [45, 65, 45, 60, 60, 50],
+    [40, 50, 50, 50, 45, 45]
+  ]
+}

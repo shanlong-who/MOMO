@@ -1,0 +1,118 @@
+{
+  "status": "installed-and-verified",
+  "edition": "2.0.0",
+  "installed_at": "20261113-101642",
+  "destination": "C:/Users/User/.codex/pets/dragon",
+  "source": "C:/Users/User/OneDrive - World Health Organization/Documents/CAT/MOMO/Dragon-GPT/dragon",
+  "backup": {},
+  "sprite_sha256": "c986606535a08a08934d9d4fbc82daa95761e75f94093cdd8e2eea4fd751e94d",
+  "files_verified": 26,
+  "other_pet_files_unchanged": 43,
+  "installed_files": [
+    {
+      "path": "GENERATION.md",
+      "sha256": "beaa6e52b790dd150534af7b98d5f107acaa7f2dc50ffe85690cf1a52442c7d0"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "ab4f7e32594c5691f2a2398d8e8398c5008fdc6f4c237605e5e4c43e054d95eb"
+    },
+    {
+      "path": "README.md",
+      "sha256": "a49c03f7f01977d89d348bdfae99c45403d9a7f683b942b34fe790a89ba781fd"
+    },
+    {
+      "path": "contact-sheet.png",
+      "sha256": "9e6d377ba72ac39cadfee00a764f828c95000c46b64c2ddfa988636ecf5d905d"
+    },
+    {
+      "path": "direction-semantics.json",
+      "sha256": "2238538a0830c276fe25bdde46a2f0ffb9a7eb2381f14c7c318e889d0f4faf84"
+    },
+    {
+      "path": "look-continuity.json",
+      "sha256": "45ef57ae58af6660a99a291cb8c7cef7f822d5156194fafc17771a4712de47a7"
+    },
+    {
+      "path": "look-directions.png",
+      "sha256": "b9eb8cb65fd9eb1ffe078fe29a95b2aa2e4b37f12f698b887330b434a567013f"
+    },
+    {
+      "path": "pet.json",
+      "sha256": "c25a1e73227d857b7d8af93193ef391eef1be4ab26985dc78aae11ed3636ba3c"
+    },
+    {
+      "path": "previews/all-states.gif",
+      "sha256": "f57c0e84b34e429df995ea647f1ec23c6a0b7fe088ba1334577022f9804d1da7"
+    },
+    {
+      "path": "previews/failed.gif",
+      "sha256": "5c8b7fed8b7a0cbd0cbf1a53a17a642de114c45f6c349a641ad25b045fe1ed55"
+    },
+    {
+      "path": "previews/idle-jump-idle.gif",
+      "sha256": "a3ca33881ccdb06918d22bd6ab2c3efb6795974d81c4779e1e51ff2b010daea2"
+    },
+    {
+      "path": "previews/idle.gif",
+      "sha256": "c5d10953edf3e31e86db0ed296dc7614897ac00db74ab4f7bff20340b524b5a1"
+    },
+    {
+      "path": "previews/jumping.gif",
+      "sha256": "6e0c676b530dd43e498a0afc32991721ff8907867ea2a8522ef87b06b55b3dbf"
+    },
+    {
+      "path": "previews/look-first.gif",
+      "sha256": "0be3d229848ceec731296292c9bf102490df44ccced4680b632d8d28e462db47"
+    },
+    {
+      "path": "previews/look-loop.gif",
+      "sha256": "966456288ad3b33d4868fb8c8c06aa89dfa35515285323d4480f3e2727809b5d"
+    },
+    {
+      "path": "previews/look-second.gif",
+      "sha256": "d73c631c0a9532b517034894911d6e7f96964aae0b0a11e35457aa8eb895e2f4"
+    },
+    {
+      "path": "previews/motion-stills.png",
+      "sha256": "bfcf9b60a011a72d3364c414e8d3cfc64f99ab7f0311d172364c5b47f704e9b5"
+    },
+    {
+      "path": "previews/review.gif",
+      "sha256": "ac65f66f3ac1724d5fd23efece8d285a1a7594b52cf0c41bf07305e74916b6d0"
+    },
+    {
+      "path": "previews/running-left.gif",
+      "sha256": "1662eccce70fea5eb1769a48f028175c4987ec0e6fb3f25dd4637a54b475ee01"
+    },
+    {
+      "path": "previews/running-right.gif",
+      "sha256": "96380bd3d67d6039c78e185845759a263f1bdbb7ada72aa1584201fb96a0745f"
+    },
+    {
+      "path": "previews/running.gif",
+      "sha256": "b7cea2aef07bb803d1719deed2b54c650cca15b692d76e895a35aaf8db7ad12c"
+    },
+    {
+      "path": "previews/waiting.gif",
+      "sha256": "3c1e95557be7d8b74460e4ee604a0ff48024c2bacedde832b8a1836fbd87e3b2"
+    },
+    {
+      "path": "previews/waving.gif",
+      "sha256": "4a39d9cdc70e826c34774849f77840f8c0f38f1de6070767dac712861a25b772"
+    },
+    {
+      "path": "spritesheet.webp",
+      "sha256": "c986606535a08a08934d9d4fbc82daa95761e75f94093cdd8e2eea4fd751e94d"
+    },
+    {
+      "path": "validation.json",
+      "sha256": "b6e83cd681fbcf097c196dcd8152ba0cde0e7e50d44dd9f3f92e280a9ca0544c"
+    },
+    {
+      "path": "visual-review.json",
+      "sha256": "728c0d7466fce3822203887f72203cb0f4f90c90780c19d25fb8f24e4a6db73d"
+    }
+  ],
+  "activation": "Installed in the local desktop library. Refresh and selection in the app have not been performed."
+}

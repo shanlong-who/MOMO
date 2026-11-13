@@ -1,78 +1,82 @@
-# MOMO & MIMI
+# MOMO, MIMI and Dragon
 
-Two small Windows desktop cats, made just for fun. **Lite 2.0.0** runs without
-R, RStudio, a separately installed .NET runtime or an internet connection.
+Personal desktop companions, made just for fun. Each character has a package
+for the desktop chat application's Pets feature and a standalone Windows
+application. The standalone applications contain their artwork and require
+no R, RStudio, .NET installation or internet connection.
 
 ![MOMO and MIMI](Releases/2.0.0/MOMO-MIMI-preview.png)
 
-## Download and run
+## Choose a companion
 
-For Windows 10/11 on Intel or AMD x64:
-
-| Pet | Download | ZIP size |
+| Character | Desktop chat pet | Standalone Windows application |
 | --- | --- | --- |
-| MOMO | [MOMO-Lite-2.0.0-windows-x64.zip](https://github.com/shanlong-who/MOMO/releases/download/v2.0.0/MOMO-Lite-2.0.0-windows-x64.zip) | 6.62 MB |
-| MIMI | [MIMI-Lite-2.0.0-windows-x64.zip](https://github.com/shanlong-who/MOMO/releases/download/v2.0.0/MIMI-Lite-2.0.0-windows-x64.zip) | 6.50 MB |
+| MOMO | [MOMO-GPT](MOMO-GPT/README.md) | [MOMO-Offline](MOMO-Offline/README.md) |
+| MIMI | [MIMI-GPT](MIMI-GPT/README.md) | [MIMI-Offline](MIMI-Offline/README.md) |
+| Dragon | [Dragon-GPT](Dragon-GPT/README.md) | [Dragon-Offline](Dragon-Offline/README.md) |
 
-Extract the ZIP and double-click **MOMO.exe** or **MIMI.exe**. Each EXE contains
-its artwork and icon and can be moved on its own. Both cats can run together.
-The packages are about 92% smaller than the previous R-bundled downloads.
+The chat pet packages use the transparent v2 sprite-sheet format. The current
+MOMO package has no collar. The desktop account also retains the original
+collared version under the name **Momo Collar**; the collar-free version is
+**Momo**. MIMI retains its original released appearance. Appearance, animation
+and switching for these three cat options were confirmed in the desktop app.
 
-MOMO has no collar or pendant. MIMI has clearer fur, eyes and tabby markings.
-Complete silhouettes and transparent margins prevent clipped paws or ears and
-fragments from neighboring animation frames. The EXEs are unsigned.
+Dragon 2.0 uses the approved simplified design, graceful gliding and restrained
+human gestures. Its standalone edition uses longer quiet intervals and
+once-only responses. See the product folders for details and validation.
 
-Drag to move, click to say hello, double-click to jump, and right-click for
-actions, sizes, preferences or exit. Opening the same EXE again brings that
-cat home. Settings are separate under `%LOCALAPPDATA%\DesktopPetsLite\MOMO`
-and `%LOCALAPPDATA%\DesktopPetsLite\MIMI`.
+## Run a standalone companion
+
+Use Windows 10/11 on Intel or AMD x64. Open the relevant Offline folder and
+double-click `MOMO.exe`, `MIMI.exe` or `Dragon-Offline.exe`. The programs are
+unsigned. Each EXE contains its artwork and icon and can be moved on its own.
+
+Drag to move, click for a greeting, double-click for a jump or lift, and
+right-click for actions, size, preferences and exit. Settings are separate
+under `%LOCALAPPDATA%/DesktopPetsLite`.
+
+The [MOMO and MIMI Lite 2.0.0 release](https://github.com/shanlong-who/MOMO/releases/tag/v2.0.0)
+retains the published ZIPs. Dragon's current standalone ZIP and self-contained
+source ZIP are preserved in [the supporting-file archive](archive/supporting-files-2026-11-13/).
 
 ## Project folders
 
-The current project has four product folders:
-
-| Folder | Contents |
-| --- | --- |
-| [MOMO-GPT](MOMO-GPT/README.md) | Original chat-app pet package; hosted by the chat application |
-| [MOMO-Offline](MOMO-Offline/README.md) | Current standalone MOMO executable, instructions and license notices |
-| [MIMI-Offline](MIMI-Offline/README.md) | Current standalone MIMI executable, instructions and license notices |
-| [Releases](Releases/README.md) | Release ZIPs, shared native source, artwork, checksums and publishing records |
+The organized local project contains exactly these eight top-level folders:
 
 ```text
+Releases/
+archive/
+Dragon-GPT/
+Dragon-Offline/
 MOMO-GPT/
 MOMO-Offline/
-  MOMO.exe
+MIMI-GPT/
 MIMI-Offline/
-  MIMI.exe
-Releases/
-  2.0.0/
-    MOMO-Lite-2.0.0-windows-x64.zip
-    MIMI-Lite-2.0.0-windows-x64.zip
-    Source/
-      src/
-      scripts/
-      tests/
-      assets/aligned/
-      artwork/remastered/
 ```
 
-Old installers, duplicate downloads and trial builds are not part of the
-current project. The [v1.0.0 source](https://github.com/shanlong-who/MOMO/tree/v1.0.0)
-and Git history retain the older R editions and their portable build tools.
-No local Archive folder is needed to run, build, test or package Lite 2.0.0.
+[Releases](Releases/README.md) contains the published cat packages, shared
+native source, artwork and validation. [archive](archive/README.md) contains
+original packages, previous editions, Dragon and GPT supporting source, and
+verification records. Temporary builds and duplicate extraction checks were
+removed during the 2026-11-13 organization. Current EXEs and distribution
+ZIPs retain their original checksums.
 
-## Source and validation
+The repository also retains its README, license, Git configuration files and
+Windows release-check workflow. Earlier R editions remain in
+[Git history](https://github.com/shanlong-who/MOMO/tree/v1.0.0).
 
-The current application uses C++17, Win32 and Windows GDI+.
-[Source and build instructions](Releases/2.0.0/Source/README.md) cover both cats.
-R is used for development scripts only; it is not required by the finished EXEs.
-The source includes the final atlases, icons, artwork, tests and packaging script.
+## Source and checks
 
-The [release validation](Releases/2.0.0/RELEASE-VALIDATION.txt) covers all 148
-animation frames at four sizes, native windows, actions, settings, simultaneous
-cats, repeated launches and relocated executables. The GitHub Windows workflow
-checks the committed ZIP/EXE checksums and runs their native rendering tests.
-It does not replace the full local source build and application test suite.
+The standalone applications use C++17, Win32 and Windows GDI+. R is used for
+development, artwork preparation, tests and packaging only. Start with the
+[MOMO/MIMI source instructions](Releases/2.0.0/Source/README.md) or extract
+the [Dragon source ZIP](archive/supporting-files-2026-11-13/Dragon-Source.zip)
+to a separate development directory to retain its original sibling layout.
 
-Code and generated artwork use the [MIT License](LICENSE). Each package includes
-the compiler runtime notices and applicable license texts.
+The [published cat validation](Releases/2.0.0/RELEASE-VALIDATION.txt) and
+[Dragon validation](archive/supporting-files-2026-11-13/Dragon-RELEASE-VALIDATION.txt)
+record the tests performed. The GitHub Windows workflow verifies the existing
+MOMO/MIMI release checksums and native rendering tests.
+
+Code and generated artwork use the [MIT License](LICENSE). Packages include
+the relevant compiler runtime notices and license texts.

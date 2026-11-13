@@ -1,0 +1,23 @@
+{
+  "active_pet_id": "pet_6abb2ee29a7c8191bb7029359736a9ee",
+  "pets": [
+    {
+      "id": "pet_6af6692b7c888191ab32fa8584f3f021",
+      "name": "Mimi",
+      "is_active": false,
+      "is_custom": true
+    },
+    {
+      "id": "pet_6abb87319e608191a4124d3caec52e30",
+      "name": "Momo",
+      "is_active": false,
+      "is_custom": true
+    },
+    {
+      "id": "pet_6abb2ee29a7c8191bb7029359736a9ee",
+      "name": "Momo Collar",
+      "is_active": true,
+      "is_custom": true
+    }
+  ]
+}

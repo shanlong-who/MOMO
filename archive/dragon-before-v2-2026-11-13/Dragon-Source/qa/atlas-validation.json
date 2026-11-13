@@ -1,0 +1,630 @@
+{
+  "ok": true,
+  "scope": "R structural and registration checks; visual semantics recorded separately",
+  "file": "C:/Users/User/OneDrive - World Health Organization/Documents/CAT/MOMO/Dragon-Source/assets/spritesheet.png",
+  "sha256": "0b949ec43673f00b3d1f948f9501ae8b4e5b8fe180d93f0761988b6228337b5d",
+  "width": 1536,
+  "height": 2288,
+  "version": 2,
+  "populated.frames": 73,
+  "empty.cells": 15,
+  "jump.maximum.lift.pixels": 26.4269,
+  "cells": [
+    {
+      "row": 0,
+      "frame": 0,
+      "used": true,
+      "occupied.pixels": 11633,
+      "edge.clear": true
+    },
+    {
+      "row": 0,
+      "frame": 1,
+      "used": true,
+      "occupied.pixels": 11568,
+      "edge.clear": true
+    },
+    {
+      "row": 0,
+      "frame": 2,
+      "used": true,
+      "occupied.pixels": 11492,
+      "edge.clear": true
+    },
+    {
+      "row": 0,
+      "frame": 3,
+      "used": true,
+      "occupied.pixels": 11336,
+      "edge.clear": true
+    },
+    {
+      "row": 0,
+      "frame": 4,
+      "used": true,
+      "occupied.pixels": 11417,
+      "edge.clear": true
+    },
+    {
+      "row": 0,
+      "frame": 5,
+      "used": true,
+      "occupied.pixels": 11385,
+      "edge.clear": true
+    },
+    {
+      "row": 0,
+      "frame": 6,
+      "used": false,
+      "occupied.pixels": 0,
+      "edge.clear": true
+    },
+    {
+      "row": 0,
+      "frame": 7,
+      "used": false,
+      "occupied.pixels": 0,
+      "edge.clear": true
+    },
+    {
+      "row": 1,
+      "frame": 0,
+      "used": true,
+      "occupied.pixels": 12067,
+      "edge.clear": true
+    },
+    {
+      "row": 1,
+      "frame": 1,
+      "used": true,
+      "occupied.pixels": 10681,
+      "edge.clear": true
+    },
+    {
+      "row": 1,
+      "frame": 2,
+      "used": true,
+      "occupied.pixels": 11087,
+      "edge.clear": true
+    },
+    {
+      "row": 1,
+      "frame": 3,
+      "used": true,
+      "occupied.pixels": 12205,
+      "edge.clear": true
+    },
+    {
+      "row": 1,
+      "frame": 4,
+      "used": true,
+      "occupied.pixels": 12340,
+      "edge.clear": true
+    },
+    {
+      "row": 1,
+      "frame": 5,
+      "used": true,
+      "occupied.pixels": 11638,
+      "edge.clear": true
+    },
+    {
+      "row": 1,
+      "frame": 6,
+      "used": true,
+      "occupied.pixels": 11962,
+      "edge.clear": true
+    },
+    {
+      "row": 1,
+      "frame": 7,
+      "used": true,
+      "occupied.pixels": 11582,
+      "edge.clear": true
+    },
+    {
+      "row": 2,
+      "frame": 0,
+      "used": true,
+      "occupied.pixels": 12491,
+      "edge.clear": true
+    },
+    {
+      "row": 2,
+      "frame": 1,
+      "used": true,
+      "occupied.pixels": 12250,
+      "edge.clear": true
+    },
+    {
+      "row": 2,
+      "frame": 2,
+      "used": true,
+      "occupied.pixels": 11835,
+      "edge.clear": true
+    },
+    {
+      "row": 2,
+      "frame": 3,
+      "used": true,
+      "occupied.pixels": 12310,
+      "edge.clear": true
+    },
+    {
+      "row": 2,
+      "frame": 4,
+      "used": true,
+      "occupied.pixels": 11834,
+      "edge.clear": true
+    },
+    {
+      "row": 2,
+      "frame": 5,
+      "used": true,
+      "occupied.pixels": 11121,
+      "edge.clear": true
+    },
+    {
+      "row": 2,
+      "frame": 6,
+      "used": true,
+      "occupied.pixels": 11768,
+      "edge.clear": true
+    },
+    {
+      "row": 2,
+      "frame": 7,
+      "used": true,
+      "occupied.pixels": 11866,
+      "edge.clear": true
+    },
+    {
+      "row": 3,
+      "frame": 0,
+      "used": true,
+      "occupied.pixels": 11672,
+      "edge.clear": true
+    },
+    {
+      "row": 3,
+      "frame": 1,
+      "used": true,
+      "occupied.pixels": 11607,
+      "edge.clear": true
+    },
+    {
+      "row": 3,
+      "frame": 2,
+      "used": true,
+      "occupied.pixels": 11650,
+      "edge.clear": true
+    },
+    {
+      "row": 3,
+      "frame": 3,
+      "used": true,
+      "occupied.pixels": 11580,
+      "edge.clear": true
+    },
+    {
+      "row": 3,
+      "frame": 4,
+      "used": false,
+      "occupied.pixels": 0,
+      "edge.clear": true
+    },
+    {
+      "row": 3,
+      "frame": 5,
+      "used": false,
+      "occupied.pixels": 0,
+      "edge.clear": true
+    },
+    {
+      "row": 3,
+      "frame": 6,
+      "used": false,
+      "occupied.pixels": 0,
+      "edge.clear": true
+    },
+    {
+      "row": 3,
+      "frame": 7,
+      "used": false,
+      "occupied.pixels": 0,
+      "edge.clear": true
+    },
+    {
+      "row": 4,
+      "frame": 0,
+      "used": true,
+      "occupied.pixels": 12196,
+      "edge.clear": true
+    },
+    {
+      "row": 4,
+      "frame": 1,
+      "used": true,
+      "occupied.pixels": 12146,
+      "edge.clear": true
+    },
+    {
+      "row": 4,
+      "frame": 2,
+      "used": true,
+      "occupied.pixels": 12199,
+      "edge.clear": true
+    },
+    {
+      "row": 4,
+      "frame": 3,
+      "used": true,
+      "occupied.pixels": 12187,
+      "edge.clear": true
+    },
+    {
+      "row": 4,
+      "frame": 4,
+      "used": true,
+      "occupied.pixels": 12209,
+      "edge.clear": true
+    },
+    {
+      "row": 4,
+      "frame": 5,
+      "used": false,
+      "occupied.pixels": 0,
+      "edge.clear": true
+    },
+    {
+      "row": 4,
+      "frame": 6,
+      "used": false,
+      "occupied.pixels": 0,
+      "edge.clear": true
+    },
+    {
+      "row": 4,
+      "frame": 7,
+      "used": false,
+      "occupied.pixels": 0,
+      "edge.clear": true
+    },
+    {
+      "row": 5,
+      "frame": 0,
+      "used": true,
+      "occupied.pixels": 10734,
+      "edge.clear": true
+    },
+    {
+      "row": 5,
+      "frame": 1,
+      "used": true,
+      "occupied.pixels": 10671,
+      "edge.clear": true
+    },
+    {
+      "row": 5,
+      "frame": 2,
+      "used": true,
+      "occupied.pixels": 10633,
+      "edge.clear": true
+    },
+    {
+      "row": 5,
+      "frame": 3,
+      "used": true,
+      "occupied.pixels": 10817,
+      "edge.clear": true
+    },
+    {
+      "row": 5,
+      "frame": 4,
+      "used": true,
+      "occupied.pixels": 10654,
+      "edge.clear": true
+    },
+    {
+      "row": 5,
+      "frame": 5,
+      "used": true,
+      "occupied.pixels": 10700,
+      "edge.clear": true
+    },
+    {
+      "row": 5,
+      "frame": 6,
+      "used": true,
+      "occupied.pixels": 10639,
+      "edge.clear": true
+    },
+    {
+      "row": 5,
+      "frame": 7,
+      "used": true,
+      "occupied.pixels": 10758,
+      "edge.clear": true
+    },
+    {
+      "row": 6,
+      "frame": 0,
+      "used": true,
+      "occupied.pixels": 11049,
+      "edge.clear": true
+    },
+    {
+      "row": 6,
+      "frame": 1,
+      "used": true,
+      "occupied.pixels": 11076,
+      "edge.clear": true
+    },
+    {
+      "row": 6,
+      "frame": 2,
+      "used": true,
+      "occupied.pixels": 11106,
+      "edge.clear": true
+    },
+    {
+      "row": 6,
+      "frame": 3,
+      "used": true,
+      "occupied.pixels": 11053,
+      "edge.clear": true
+    },
+    {
+      "row": 6,
+      "frame": 4,
+      "used": true,
+      "occupied.pixels": 11122,
+      "edge.clear": true
+    },
+    {
+      "row": 6,
+      "frame": 5,
+      "used": true,
+      "occupied.pixels": 11113,
+      "edge.clear": true
+    },
+    {
+      "row": 6,
+      "frame": 6,
+      "used": false,
+      "occupied.pixels": 0,
+      "edge.clear": true
+    },
+    {
+      "row": 6,
+      "frame": 7,
+      "used": false,
+      "occupied.pixels": 0,
+      "edge.clear": true
+    },
+    {
+      "row": 7,
+      "frame": 0,
+      "used": true,
+      "occupied.pixels": 11376,
+      "edge.clear": true
+    },
+    {
+      "row": 7,
+      "frame": 1,
+      "used": true,
+      "occupied.pixels": 11413,
+      "edge.clear": true
+    },
+    {
+      "row": 7,
+      "frame": 2,
+      "used": true,
+      "occupied.pixels": 11276,
+      "edge.clear": true
+    },
+    {
+      "row": 7,
+      "frame": 3,
+      "used": true,
+      "occupied.pixels": 11365,
+      "edge.clear": true
+    },
+    {
+      "row": 7,
+      "frame": 4,
+      "used": true,
+      "occupied.pixels": 11520,
+      "edge.clear": true
+    },
+    {
+      "row": 7,
+      "frame": 5,
+      "used": true,
+      "occupied.pixels": 11351,
+      "edge.clear": true
+    },
+    {
+      "row": 7,
+      "frame": 6,
+      "used": false,
+      "occupied.pixels": 0,
+      "edge.clear": true
+    },
+    {
+      "row": 7,
+      "frame": 7,
+      "used": false,
+      "occupied.pixels": 0,
+      "edge.clear": true
+    },
+    {
+      "row": 8,
+      "frame": 0,
+      "used": true,
+      "occupied.pixels": 11244,
+      "edge.clear": true
+    },
+    {
+      "row": 8,
+      "frame": 1,
+      "used": true,
+      "occupied.pixels": 11252,
+      "edge.clear": true
+    },
+    {
+      "row": 8,
+      "frame": 2,
+      "used": true,
+      "occupied.pixels": 11202,
+      "edge.clear": true
+    },
+    {
+      "row": 8,
+      "frame": 3,
+      "used": true,
+      "occupied.pixels": 11242,
+      "edge.clear": true
+    },
+    {
+      "row": 8,
+      "frame": 4,
+      "used": true,
+      "occupied.pixels": 11269,
+      "edge.clear": true
+    },
+    {
+      "row": 8,
+      "frame": 5,
+      "used": true,
+      "occupied.pixels": 11258,
+      "edge.clear": true
+    },
+    {
+      "row": 8,
+      "frame": 6,
+      "used": false,
+      "occupied.pixels": 0,
+      "edge.clear": true
+    },
+    {
+      "row": 8,
+      "frame": 7,
+      "used": false,
+      "occupied.pixels": 0,
+      "edge.clear": true
+    },
+    {
+      "row": 9,
+      "frame": 0,
+      "used": true,
+      "occupied.pixels": 12051,
+      "edge.clear": true
+    },
+    {
+      "row": 9,
+      "frame": 1,
+      "used": true,
+      "occupied.pixels": 12018,
+      "edge.clear": true
+    },
+    {
+      "row": 9,
+      "frame": 2,
+      "used": true,
+      "occupied.pixels": 12059,
+      "edge.clear": true
+    },
+    {
+      "row": 9,
+      "frame": 3,
+      "used": true,
+      "occupied.pixels": 12064,
+      "edge.clear": true
+    },
+    {
+      "row": 9,
+      "frame": 4,
+      "used": true,
+      "occupied.pixels": 12065,
+      "edge.clear": true
+    },
+    {
+      "row": 9,
+      "frame": 5,
+      "used": true,
+      "occupied.pixels": 12112,
+      "edge.clear": true
+    },
+    {
+      "row": 9,
+      "frame": 6,
+      "used": true,
+      "occupied.pixels": 12076,
+      "edge.clear": true
+    },
+    {
+      "row": 9,
+      "frame": 7,
+      "used": true,
+      "occupied.pixels": 12065,
+      "edge.clear": true
+    },
+    {
+      "row": 10,
+      "frame": 0,
+      "used": true,
+      "occupied.pixels": 11918,
+      "edge.clear": true
+    },
+    {
+      "row": 10,
+      "frame": 1,
+      "used": true,
+      "occupied.pixels": 11916,
+      "edge.clear": true
+    },
+    {
+      "row": 10,
+      "frame": 2,
+      "used": true,
+      "occupied.pixels": 11779,
+      "edge.clear": true
+    },
+    {
+      "row": 10,
+      "frame": 3,
+      "used": true,
+      "occupied.pixels": 11764,
+      "edge.clear": true
+    },
+    {
+      "row": 10,
+      "frame": 4,
+      "used": true,
+      "occupied.pixels": 11901,
+      "edge.clear": true
+    },
+    {
+      "row": 10,
+      "frame": 5,
+      "used": true,
+      "occupied.pixels": 11901,
+      "edge.clear": true
+    },
+    {
+      "row": 10,
+      "frame": 6,
+      "used": true,
+      "occupied.pixels": 11958,
+      "edge.clear": true
+    },
+    {
+      "row": 10,
+      "frame": 7,
+      "used": true,
+      "occupied.pixels": 11947,
+      "edge.clear": true
+    }
+  ]
+}

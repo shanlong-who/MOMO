@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "reviewed_from": ["qa/look-directions.png", "qa/direction-blind-validation.json", "qa/look-continuity.json"],
+  "directions": [
+    {"direction":"000","verdict":"pass","expected":"up","observed":"up","reason":"Both amber eyes, pupils, nose, and chin lift above head center; blind vertical cardinal is unanimous."},
+    {"direction":"022.5","verdict":"warning","expected":"up-right","observed":"up-right","reason":"Up axis is unanimous blind; the subtle screen-right cue is clearer in the labeled ordered loop through rightward nose and cheek progression."},
+    {"direction":"045","verdict":"pass","expected":"up-right","observed":"up-right","reason":"Blind reviewers unanimously confirm both up and screen-right axes; lifted muzzle and rightward head yaw are visible."},
+    {"direction":"067.5","verdict":"warning","expected":"up-right","observed":"up-right","reason":"Screen-right axis is unanimous blind; the upward component is subtle in isolation but the labeled loop shows a raised muzzle between 045 and 090 without reversal."},
+    {"direction":"090","verdict":"pass","expected":"right","observed":"right","reason":"Nose, pupils, muzzle, and head point unmistakably screen-right; blind horizontal cardinal is unanimous."},
+    {"direction":"112.5","verdict":"warning","expected":"down-right","observed":"down-right","reason":"Screen-right axis is unanimous blind; labeled loop shows the eyes and muzzle lowering from 090 toward 135 without reversal."},
+    {"direction":"135","verdict":"pass","expected":"down-right","observed":"down-right","reason":"Blind reviewers unanimously confirm both down and screen-right axes; head is visibly turned and tucked."},
+    {"direction":"157.5","verdict":"pass","expected":"down-right","observed":"down-right","reason":"Blind reviewers confirm both axes; low eyes and nose retain a small rightward cue one step before down."},
+    {"direction":"180","verdict":"pass","expected":"down","observed":"down","reason":"Eyes and nose are low and chin tucks to chest; blind vertical cardinal is unanimous."},
+    {"direction":"202.5","verdict":"pass","expected":"down-left","observed":"down-left","reason":"Blind reviewers unanimously confirm both down and screen-left axes; lowered muzzle begins the left arc."},
+    {"direction":"225","verdict":"pass","expected":"down-left","observed":"down-left","reason":"Blind reviewers unanimously confirm both axes; left cheek turn and lowered face are clear."},
+    {"direction":"247.5","verdict":"warning","expected":"down-left","observed":"down-left","reason":"Screen-left axis is unanimous blind; the downward cue is subtle alone but the labeled loop places the slightly lowered muzzle continuously between 225 and 270."},
+    {"direction":"270","verdict":"pass","expected":"left","observed":"left","reason":"Nose, pupils, muzzle, and head point unmistakably screen-left; blind horizontal cardinal is unanimous."},
+    {"direction":"292.5","verdict":"pass","expected":"up-left","observed":"up-left","reason":"Blind reviewers unanimously confirm both axes; leftward profile remains while eyes and muzzle lift."},
+    {"direction":"315","verdict":"pass","expected":"up-left","observed":"up-left","reason":"Blind reviewers unanimously confirm both axes; raised chin and leftward cheek turn are clear."},
+    {"direction":"337.5","verdict":"warning","expected":"up-left","observed":"up-left","reason":"Up axis is unanimous blind; subtle screen-left cue is confirmed by the labeled loop and the even transition from 315 into 000."}
+  ],
+  "continuity_resolution": {
+    "verdict": "pass_with_reviewed_warnings",
+    "reason": "Normal-size ordered review shows no visible snap, scale pop, identity change, clipping, seam, broken attachment, or loop reversal. Reported alpha-hole rows are legitimate negative space around separated ears/head contours, not transparent bands inside filled anatomy. Larger boundary diffs reflect natural head pitch between lower and vertical poses while feet, baseline, collar, and tag remain stable."
+  }
+}

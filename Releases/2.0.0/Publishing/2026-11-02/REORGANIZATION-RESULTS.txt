@@ -1,0 +1,7 @@
+PASS: exactly five requested folders at the project root.
+PASS: all 355 original files preserved; the updated README has an unchanged archived backup.
+PASS: all 36 source snapshot files match the original source.
+PASS: active applications and release ZIPs retain the published 2.0.0 hashes.
+PASS: relocated applications passed all 592 frame-rendering checks and both native window smoke tests.
+PASS: both desktop shortcuts point directly to the active EXEs, use their cat icons and have no extra arguments.
+PASS: exactly one desktop item per requested name; old shortcuts backed up in Archive.

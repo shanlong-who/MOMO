@@ -1,0 +1,23 @@
+{
+  "status": "cloud-records-and-artwork-verified",
+  "momo": {
+    "id": "pet_6abb87319e608191a4124d3caec52e30",
+    "name": "Momo",
+    "stored_sha256": "a20fdb0ed457812fdec101486c410cc414e38227dc0d6767637ddcadc67f6d0b",
+    "all_decoded_pixels_match_approved_collar_free_atlas": true
+  },
+  "momo_collar": {
+    "id": "pet_6abb2ee29a7c8191bb7029359736a9ee",
+    "name": "Momo Collar",
+    "stored_sha256": "c4f3f56af54b2ce88390b3b133bb30653b405752cc40d9cecc1c1a9b0eba74f3",
+    "image_is_byte_identical_to_original": true
+  },
+  "mimi": {
+    "id": "pet_6af6692b7c888191ab32fa8584f3f021",
+    "name": "Mimi",
+    "unchanged": true
+  },
+  "stable_ids_preserved": true,
+  "original_active_selection_preserved": true,
+  "direct_desktop_switch_test": "User confirmed all three appearances, animations and switching are correct; see desktop-user-confirmation.json"
+}

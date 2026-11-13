@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "pet_id": "momo",
+  "display_name": "Momo",
+  "spriteVersionNumber": 2,
+  "run_dir": "C:/Users/dings/Documents/Codex/2026-08-12/hatch-pet-c-users-dings-codex-3/work/momo-pet-run",
+  "spritesheet": "final/spritesheet-extended.webp",
+  "validation": "final/validation-extended.json",
+  "chroma_despill": "qa/chroma-despill-extended.json",
+  "contact_sheet": "qa/contact-sheet-extended.png",
+  "direction_sheet": "qa/look-directions.png",
+  "direction_semantics": "qa/direction-semantics.json",
+  "blind_direction_validation": "qa/direction-blind-validation.json",
+  "blind_review_resolution": "qa/blind-review-resolution.json",
+  "continuity": "qa/look-continuity.json",
+  "review": "qa/review.json",
+  "final_visual_qa": "qa/final-visual-qa.txt",
+  "package": "C:/Users/dings/.codex/pets/momo",
+  "installed_sprite_sha256": "42CCBF809B5364F8AD0C72F4A684696D55EF28A27F96FFFE3BEB2F133EBF1CAF"
+}

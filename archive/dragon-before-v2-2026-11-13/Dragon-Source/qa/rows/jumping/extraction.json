@@ -1,0 +1,11 @@
+{
+  "state": "jumping",
+  "expected.frames": 5,
+  "connected.figures": 5,
+  "method": "connected component extraction with two-pixel edge retention",
+  "source": "artwork/rows/jumping.png",
+  "source.width": 2172,
+  "source.height": 724,
+  "min.height": 524,
+  "max.height": 603
+}

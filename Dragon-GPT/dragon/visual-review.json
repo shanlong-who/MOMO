@@ -1,0 +1,41 @@
+{
+  "edition": "Dragon 2.0.0",
+  "method": [
+    "native-size contact sheet review",
+    "ordered source and encoded frame review",
+    "four labeled timestamped motion stills",
+    "three independent blind cardinal classifications",
+    "native runtime playback progression test"
+  ],
+  "approved_concept_preserved": true,
+  "full_silhouettes": true,
+  "human_posture_and_gestures": true,
+  "directional_movement": "upright graceful glide with feet together and modest wing cadence",
+  "acting": {
+    "idle": "quiet breathing and blink",
+    "greeting": "small palm gesture, head inclination, brief wink, return to rest",
+    "celebration": "small upright airborne lift and controlled landing",
+    "failed": "brief concern, soft exhale and reassuring recovery",
+    "waiting": "attentive head tilt and small offered palm",
+    "thinking": "fingertip at chin, gaze and knowing smile",
+    "review": "downward inspection scan and confirming nod"
+  },
+  "independent_standard_review": "No visible clipping, loose effects, animal-like crouches or excessive energy. Large eyes and simplified shapes read more clearly at native size.",
+  "warnings": [
+    {
+      "state": "review",
+      "observation": "The quiet inspection gesture is close to idle in a single still; gaze scan and nod across its ordered frames provide the distinction.",
+      "resolution": "Accepted as restrained human acting; no new props or exaggerated movement added."
+    }
+  ],
+  "runtime_review_scope": "Automated native transparent-window rendering and command/state tests. No live manual desktop interaction was required for this release.",
+  "preview_formats": [
+    "per-state GIF",
+    "all-state GIF",
+    "idle-to-lift GIF",
+    "ordered gaze GIF",
+    "four labeled timestamped stills",
+    "native-size montage GIF"
+  ],
+  "mp4": "Not generated: optional R av binary was unavailable for this R build; GIF and still previews are complete."
+}

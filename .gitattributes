@@ -12,3 +12,17 @@
 
 # Preserve the released source and artwork snapshot byte for byte.
 Releases/2.0.0/Source/** -text
+
+# Preserve organized artifacts and their recorded SHA-256 values byte for byte.
+Releases/** -text
+Dragon-GPT/** -text
+Dragon-Offline/** -text
+MOMO-GPT/** -text
+MOMO-Offline/** -text
+MIMI-GPT/** -text
+MIMI-Offline/** -text
+archive/** -text
+*.gif binary
+*.rds binary
+*.dll binary
+*.o binary

@@ -1,0 +1,16 @@
+{
+  "Status": "organized-and-retained-files-verified",
+  "DeletedIntermediateFiles": 563,
+  "DeletedBytes": 380673483.0,
+  "VerifiedRetainedFiles": 655,
+  "TopLevel": [
+    "archive",
+    "Dragon-GPT",
+    "Dragon-Offline",
+    "MIMI-GPT",
+    "MIMI-Offline",
+    "MOMO-GPT",
+    "MOMO-Offline",
+    "Releases"
+  ]
+}

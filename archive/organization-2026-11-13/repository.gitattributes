@@ -1,0 +1,28 @@
+* text=auto
+*.R text eol=lf
+*.md text eol=lf
+*.cmd text eol=crlf
+*.png binary
+*.ico binary
+*.zip binary
+*.exe binary
+*.webp binary
+*.cpp text eol=lf
+*.yml text eol=lf
+
+# Preserve the released source and artwork snapshot byte for byte.
+Releases/2.0.0/Source/** -text
+
+# Preserve organized artifacts and their recorded SHA-256 values byte for byte.
+Releases/** -text
+Dragon-GPT/** -text
+Dragon-Offline/** -text
+MOMO-GPT/** -text
+MOMO-Offline/** -text
+MIMI-GPT/** -text
+MIMI-Offline/** -text
+archive/** -text
+*.gif binary
+*.rds binary
+*.dll binary
+*.o binary

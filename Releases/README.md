@@ -16,17 +16,23 @@ connection. Each EXE contains its artwork and icon.
 
 | Folder | Purpose |
 | --- | --- |
-| `../MOMO-GPT` | Original MOMO export for the chat application |
+| `../Dragon-GPT` | Dragon 2.0 package for the desktop chat application |
+| `../Dragon-Offline` | Standalone Dragon 2.0 application |
+| `../MOMO-GPT` | Collar-free MOMO package for the desktop chat application |
 | `../MOMO-Offline` | Current standalone MOMO application; run `MOMO.exe` |
+| `../MIMI-GPT` | MIMI package for the desktop chat application |
 | `../MIMI-Offline` | Current standalone MIMI application; run `MIMI.exe` |
 | `Releases` | Current release ZIPs, checksums, source, artwork and publishing records |
+| `../archive` | Original packages, previous editions, source and verification records |
 
-The project was organized on 2026-11-02. The published release ZIPs and active
-EXEs retain their original checksums. The local Archive folder is no longer
-needed: old installers, duplicate downloads and trial builds can be removed.
+The project was reorganized on 2026-11-13 to retain only these eight top-level
+folders. The published release ZIPs and active EXEs retain their original
+checksums. Temporary builds and duplicate extraction checks were removed;
+unique supporting files and original packages are preserved in `archive`.
 The [earlier public source](https://github.com/shanlong-who/MOMO/tree/v1.0.0)
 remains available in GitHub history. Current source can be built and packaged
-without those old files.
+without those old files. Dragon's current source ZIP and validation records
+are in [the supporting-file archive](../archive/supporting-files-2026-11-13/).
 
 Application preferences remain in `%LOCALAPPDATA%\DesktopPetsLite\MOMO` and
 `%LOCALAPPDATA%\DesktopPetsLite\MIMI`, independently of the project folder.

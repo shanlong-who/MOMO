@@ -1,0 +1,13 @@
+{
+  "repository": "shanlong-who/MOMO",
+  "commit": "6f4f2b723c8e54532765a4f35fe4a17be2ccf407",
+  "verified_file_count": 74,
+  "all_git_blobs_match": true,
+  "old_version_tag_preserved": "e2002a28aa66843df6099fa42ecadae1dae8d47d",
+  "source_url": "https://github.com/shanlong-who/MOMO/tree/6f4f2b723c8e54532765a4f35fe4a17be2ccf407/Releases/2.0.0/Source",
+  "ci_url": "https://github.com/shanlong-who/MOMO/actions/runs/41384039141",
+  "ci_status": "success",
+  "release_tag": "v2.0.0",
+  "release_assets_unchanged": true,
+  "source_link_added_to_release": true
+}

@@ -1,0 +1,14 @@
+pid=10564
+size=288
+width=648
+height=702
+dpi=216
+x=3192
+y=844
+row=0
+column=0
+paused=1
+wander=0
+follow=0
+topmost=0
+frames=1

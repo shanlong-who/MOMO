@@ -1,0 +1,452 @@
+{
+  "Repository": "shanlong-who/MOMO",
+  "Base": "9d43019363935b41e1f2f1beb801d05837f959e6",
+  "Commit": "6f4f2b723c8e54532765a4f35fe4a17be2ccf407",
+  "Tree": "b50129d8bce40033452c76345b9d9cabc0481659",
+  "Files": [
+    {
+      "Path": ".gitattributes",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "fb82bcf7b819f7714c233d7d4759eb608b84e853"
+    },
+    {
+      "Path": ".github/workflows/native-windows.yml",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "090c43147792e887b065d9c10e07edc1157278d2"
+    },
+    {
+      "Path": ".gitignore",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "8dfe69003b7d3d0f1bfe4fac87b5f4398228ae98"
+    },
+    {
+      "Path": "LICENSE",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "5f3fbddaa6512ea3b40ddde08ba9b346ef191521"
+    },
+    {
+      "Path": "MIMI-Offline/LICENSE",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "5f3fbddaa6512ea3b40ddde08ba9b346ef191521"
+    },
+    {
+      "Path": "MIMI-Offline/MIMI.exe",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "8d77bb6579891c351f12d6d4b9acd0145f37e389"
+    },
+    {
+      "Path": "MIMI-Offline/README.md",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "b11fc00331457bc46a6ba82efd6b496d7c9dda27"
+    },
+    {
+      "Path": "MIMI-Offline/README.txt",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "4c7248583bdad75b8bb05e22646381271fea65de"
+    },
+    {
+      "Path": "MIMI-Offline/SHA256SUMS.txt",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "919fe2321166f014189c6482a2db8ae4d29f861a"
+    },
+    {
+      "Path": "MIMI-Offline/TEST-RESULTS.txt",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "14d33b3b33e2f1b0d80abf9ae9cebd88e8a0bcd2"
+    },
+    {
+      "Path": "MIMI-Offline/THIRD-PARTY-NOTICES.txt",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "06955943b6309b71526a5bd1c833bc657ec6bede"
+    },
+    {
+      "Path": "MIMI-Offline/licenses/GCC-Runtime-Exception-3.1.txt",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "3b1cdb19b22e1073b03cfa0b704459d6fa8006c8"
+    },
+    {
+      "Path": "MIMI-Offline/licenses/GPL-3.txt",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7"
+    },
+    {
+      "Path": "MIMI-Offline/licenses/MinGW-w64-COPYING.txt",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "bc24e6470f197c83951280554f1014460cda9681"
+    },
+    {
+      "Path": "MOMO-GPT/README.md",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "d5bc6d32d70746fb9d6dc197056f7d0c53ea721b"
+    },
+    {
+      "Path": "MOMO-GPT/momo-pet-v2.zip",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "ffe25bd5d5bccb2994c25b34841b9ef7e93673e0"
+    },
+    {
+      "Path": "MOMO-Offline/LICENSE",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "5f3fbddaa6512ea3b40ddde08ba9b346ef191521"
+    },
+    {
+      "Path": "MOMO-Offline/MOMO.exe",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "4381a54bd29816043367d84678bdc240734ddda3"
+    },
+    {
+      "Path": "MOMO-Offline/README.md",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "4b722a723c8c45da190c6c9323dbd52bdc6bbaae"
+    },
+    {
+      "Path": "MOMO-Offline/README.txt",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "26d950397c99bc3230b1bb1cc8357c55910a1d93"
+    },
+    {
+      "Path": "MOMO-Offline/SHA256SUMS.txt",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "86b26161061c807d5cf888803370f5b455e09118"
+    },
+    {
+      "Path": "MOMO-Offline/TEST-RESULTS.txt",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "14d33b3b33e2f1b0d80abf9ae9cebd88e8a0bcd2"
+    },
+    {
+      "Path": "MOMO-Offline/THIRD-PARTY-NOTICES.txt",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "06955943b6309b71526a5bd1c833bc657ec6bede"
+    },
+    {
+      "Path": "MOMO-Offline/licenses/GCC-Runtime-Exception-3.1.txt",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "3b1cdb19b22e1073b03cfa0b704459d6fa8006c8"
+    },
+    {
+      "Path": "MOMO-Offline/licenses/GPL-3.txt",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7"
+    },
+    {
+      "Path": "MOMO-Offline/licenses/MinGW-w64-COPYING.txt",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "bc24e6470f197c83951280554f1014460cda9681"
+    },
+    {
+      "Path": "README.md",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "166f5d7f02a8d0577ea5c675e03d97146c08cbbb"
+    },
+    {
+      "Path": "Releases/2.0.0/MIMI-Lite-2.0.0-windows-x64.zip",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "41295116f4f72b3a93c43c5aaa56dd3fb913b859"
+    },
+    {
+      "Path": "Releases/2.0.0/MOMO-Lite-2.0.0-windows-x64.zip",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "1600fc3e7e196ea532cda59dfc422f971ad5778b"
+    },
+    {
+      "Path": "Releases/2.0.0/MOMO-MIMI-preview.png",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "bf4c516b220a895e228dc1def1b3bf252f0907a8"
+    },
+    {
+      "Path": "Releases/2.0.0/PACKAGE-SIZES.csv",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "231bbbd2859960d5cc2f5787eb53762d4ac8db17"
+    },
+    {
+      "Path": "Releases/2.0.0/Publishing/2026-11-01/publish-result.json",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "633fc2943024238e4a5be8a4c2bc20914dec05a0"
+    },
+    {
+      "Path": "Releases/2.0.0/Publishing/2026-11-02/NATIVE-TEST-RESULTS.txt",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "fb51ca2da87b428517b4d1c61cccb72bf4eafc2e"
+    },
+    {
+      "Path": "Releases/2.0.0/Publishing/2026-11-02/SOURCE-VALIDATION.txt",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "187c6243d01aa08128a75e9d5543758fde38bf17"
+    },
+    {
+      "Path": "Releases/2.0.0/RELEASE-VALIDATION.txt",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "2dd346ebcd3e8799aa8a0223c5a36a030d748661"
+    },
+    {
+      "Path": "Releases/2.0.0/SHA256SUMS.txt",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "d7484ffdc29aeb5d67719e0f53b1517a0cf3f1da"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/LICENSE",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "5f3fbddaa6512ea3b40ddde08ba9b346ef191521"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/README.md",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "b6e0b7c7ba0f090cb232f321f25953cef678b30f"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/THIRD-PARTY-NOTICES.txt",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "06955943b6309b71526a5bd1c833bc657ec6bede"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/artwork/PROMPTS.txt",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "aecc50711196bcdfecd8bb5903e709efde8cd6f1"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/artwork/remastered/mimi-sheet-1.png",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "1ca56c21cb325a492d0501c6897bdfdfc7586c6f"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/artwork/remastered/mimi-sheet-2.png",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "056f19e509e4dcea54757fe57b695dc4aaf5b1c4"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/artwork/remastered/mimi-sheet-3.png",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "9909e8b8a3a90246b4aaeab042fec2fb25b8d911"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/artwork/remastered/mimi-sheet-4.png",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "55a602617b030fcc0d068303122b4eccec2e6a3a"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/artwork/remastered/mimi-sheet-5.png",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "d9aabc6d4dbf9e4ae653311c3c95f1169d27996f"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/artwork/remastered/momo-sheet-1.png",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "cc827a0a08e438ce100d3aa099f6817337c9acce"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/artwork/remastered/momo-sheet-2.png",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "28f6d85bc1bbec21c79a65d699f611dd3114f55f"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/artwork/remastered/momo-sheet-3.png",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "cf9351aefa382aece8eb46de7bd36f49a4d69bdd"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/artwork/remastered/momo-sheet-4.png",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "a561c779500841b827c4dcfb6e14cfd9efaf92b7"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/artwork/remastered/momo-sheet-5.png",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "3435bf622cc7850137802c122785bf6c262573da"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/assets/aligned/frame-coverage.csv",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "899f546affb4eec34bb38853bcf4b8d1ceee17bf"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/assets/aligned/mimi-atlas.png",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "919c4a09ec7d9d489cc3ea3f61543b817210ab41"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/assets/aligned/mimi-edge-check.png",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "0d594c2ca5c393ad9237451d94842857ce1184fd"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/assets/aligned/mimi-preview.png",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "94b1e3a36caa43b9cd94b043451473bf4f5d928d"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/assets/aligned/mimi-source-bounds.csv",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "cba16668fba8d4e6cd66890422e6055c8dd63b8b"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/assets/aligned/mimi.ico",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "0a22f7e4978e372bfbaead5cf8facaa223df72f3"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/assets/aligned/momo-atlas.png",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "5e8aaa33937815ba768e6220de59659232a2b43a"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/assets/aligned/momo-edge-check.png",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "f379d066fc847552331f505bc0ffe47db2844458"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/assets/aligned/momo-preview.png",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "a3e2d1df01a2cffb672ac2c49b6878e50b957945"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/assets/aligned/momo-source-bounds.csv",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "4deeff95a88d4529f2dded03e9773b57fbe9d6de"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/assets/aligned/momo.ico",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "641238c711aa7a15686099a9726dba4e83171434"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/licenses/GCC-Runtime-Exception-3.1.txt",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "3b1cdb19b22e1073b03cfa0b704459d6fa8006c8"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/licenses/GPL-3.txt",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/licenses/MinGW-w64-COPYING.txt",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "bc24e6470f197c83951280554f1014460cda9681"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/scripts/assemble_assets.R",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "ba535fd286427dbda639f1428c7f59fb8c00c232"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/scripts/build.R",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "673b218f1e559d335a62261592e09ea2da94c72d"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/scripts/component_helpers.R",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "7a107b47ceb8cbc61b1f5fd346ca8836a39fdac1"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/scripts/components_native.cpp",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "519ece2e597a967938847e796709183ebdb67abf"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/scripts/extract_frames.R",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "56f82a474fd3424b8fe1a688a64444392ee89cce"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/scripts/package.R",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "b6e1e82fa0afcfa6cc27109ca4cc69263edd9dfa"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/src/pet.cpp",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "a39503489b9167000692742ea01eb82a160ecb99"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/src/pet.manifest",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "56a447f35afd287ec9625394b70e18b26a51553f"
+    },
+    {
+      "Path": "Releases/2.0.0/Source/tests/test_native.R",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "01a9395bb5f54357a3aed184f1b38fda243423fa"
+    },
+    {
+      "Path": "Releases/README.md",
+      "Mode": "100644",
+      "Type": "blob",
+      "Blob": "e9f3bbeda4d0827f8cb48702157d1ca6be8ada0e"
+    }
+  ]
+}

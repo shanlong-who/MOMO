@@ -47,3 +47,21 @@ maintenance/
 **/release/
 **/assets/rebuilt/
 /Archive/
+
+# Publish the organized supporting-file archive and current pet packages.
+!/archive/
+!/archive/**
+!Dragon-GPT/dragon-pet-v2.zip
+!Dragon-Offline/Dragon-Offline.exe
+!MIMI-GPT/mimi-pet-v2.zip
+!Releases/2.0.0/Source/assets/aligned/components.dll
+
+# Keep local credentials and session state excluded from every folder.
+.env
+.env.*
+.Renviron
+.Rprofile
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/

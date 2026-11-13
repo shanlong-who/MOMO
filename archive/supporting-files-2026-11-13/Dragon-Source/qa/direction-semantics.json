@@ -1,0 +1,172 @@
+{
+  "review_scope": "Labeled normal-size review of final encoded WebP plus three independent blind cardinal reviews",
+  "cardinals_pass": true,
+  "directions": [
+    {
+      "angle": 0,
+      "expected": "up",
+      "observed": "up",
+      "verdict": "pass",
+      "evidence": "Chin and nose lift, underside jaw and neck are exposed, irises look upward."
+    },
+    {
+      "angle": 22.5,
+      "expected": "up-right",
+      "observed": "up-right",
+      "verdict": "pass",
+      "evidence": "Chin remains lifted while nose and irises shift screen-right."
+    },
+    {
+      "angle": 45,
+      "expected": "up-right",
+      "observed": "up-right",
+      "verdict": "pass",
+      "evidence": "Rightward head yaw and nose projection combine with raised chin and eye line."
+    },
+    {
+      "angle": 67.5,
+      "expected": "up-right",
+      "observed": "up-right",
+      "verdict": "warning",
+      "evidence": "Head aims mostly screen-right with a remaining upward pitch; close to the right cardinal."
+    },
+    {
+      "angle": 90,
+      "expected": "right",
+      "observed": "right",
+      "verdict": "pass",
+      "evidence": "Nose, chin profile and visible iris clearly aim screen-right."
+    },
+    {
+      "angle": 112.5,
+      "expected": "down-right",
+      "observed": "down-right",
+      "verdict": "pass",
+      "evidence": "Rightward face yaw remains while chin and gaze angle below the right cardinal."
+    },
+    {
+      "angle": 135,
+      "expected": "down-right",
+      "observed": "down-right",
+      "verdict": "pass",
+      "evidence": "Nose projects right with tucked chin and lowered visible violet eyes."
+    },
+    {
+      "angle": 157.5,
+      "expected": "down-right",
+      "observed": "down-right",
+      "verdict": "warning",
+      "evidence": "Strong downward pitch with a smaller rightward nose and iris component near the down cardinal."
+    },
+    {
+      "angle": 180,
+      "expected": "down",
+      "observed": "down",
+      "verdict": "pass",
+      "evidence": "Head bows, chin tucks toward collar and eye line lowers; both eyes remain visible."
+    },
+    {
+      "angle": 202.5,
+      "expected": "down-left",
+      "observed": "down-left",
+      "verdict": "warning",
+      "evidence": "Head bows with a smaller leftward nose and iris component near the down cardinal."
+    },
+    {
+      "angle": 225,
+      "expected": "down-left",
+      "observed": "down-left",
+      "verdict": "pass",
+      "evidence": "Leftward nose and face yaw combine with a lowered chin and downward gaze."
+    },
+    {
+      "angle": 247.5,
+      "expected": "down-left",
+      "observed": "down-left",
+      "verdict": "pass",
+      "evidence": "Head aims mostly left with a slight downward chin pitch."
+    },
+    {
+      "angle": 270,
+      "expected": "left",
+      "observed": "left",
+      "verdict": "pass",
+      "evidence": "Nose and chin profile project screen-left and visible iris follows."
+    },
+    {
+      "angle": 292.5,
+      "expected": "up-left",
+      "observed": "up-left",
+      "verdict": "pass",
+      "evidence": "Leftward nose and face remain while chin and irises rise."
+    },
+    {
+      "angle": 315,
+      "expected": "up-left",
+      "observed": "up-left",
+      "verdict": "pass",
+      "evidence": "Leftward yaw combines with raised chin, lifted nose and upward gaze."
+    },
+    {
+      "angle": 337.5,
+      "expected": "up-left",
+      "observed": "up-left",
+      "verdict": "warning",
+      "evidence": "Pronounced raised-chin pitch approaches up with a remaining slight leftward face and iris angle."
+    }
+  ],
+  "blind_cardinals": {
+    "expected": {
+      "A": "down",
+      "B": "right",
+      "C": "left",
+      "D": "up"
+    },
+    "reviewers": [
+      {
+        "id": "dragon_right",
+        "verdicts": {
+          "A": "down",
+          "B": "right",
+          "C": "left",
+          "D": "up"
+        },
+        "confidence": {
+          "A": 0.97,
+          "B": 0.98,
+          "C": 0.98,
+          "D": 0.96
+        }
+      },
+      {
+        "id": "dragon_wave",
+        "verdicts": {
+          "A": "down",
+          "B": "right",
+          "C": "left",
+          "D": "up"
+        },
+        "confidence": {
+          "A": 0.94,
+          "B": 0.98,
+          "C": 0.98,
+          "D": 0.95
+        }
+      },
+      {
+        "id": "dragon_idle",
+        "verdicts": {
+          "A": "down",
+          "B": "right",
+          "C": "left",
+          "D": "up"
+        },
+        "confidence": "high for all four"
+      }
+    ],
+    "strict_majority_matches": true,
+    "ambiguous_cardinals": 0
+  },
+  "continuity_observation": "All feet share the same baseline. Lower-body horizontal centroid span is 1.3609 pixels across sixteen final cells. No visible clipping, quadrant reversal or whole-body turntable was observed.",
+  "warnings_resolution": "Near-cardinal intermediate directions are subtle but retain both required axes in the labeled ordered family. They are accepted as review warnings, not degree-accurate physical measurements."
+}

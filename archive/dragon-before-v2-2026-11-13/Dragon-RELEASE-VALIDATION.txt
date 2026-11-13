@@ -1,0 +1,9 @@
+PASS: both delivery ZIPs extract and match tested original files by SHA-256.
+PASS: 73 embedded frames at four sizes: alpha, smooth edges, transparent borders and monitor bounds.
+PASS: All 73 frames and four sizes rendered through a real transparent native Windows window.
+PASS: Reopening the EXE reuses the same instance and brings Dragon home.
+PASS: Hello, jump, thinking, review and disappointment commands select the intended animation rows.
+PASS: Four sizes, pause, wandering, cursor tracking and always-on-top controls work.
+PASS: Clean exit and restored settings after restart; paused working set 29.6 MiB.
+PASS: Relocated EXE alone works in a path containing spaces, Chinese, ampersand and percent.
+PASS: Runtime verification uses system-only PATH, invalid R paths and unusable HTTP/HTTPS proxies.

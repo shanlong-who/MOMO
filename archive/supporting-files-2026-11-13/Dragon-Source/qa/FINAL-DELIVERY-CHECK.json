@@ -1,0 +1,11 @@
+{
+  "edition": "2.0.0",
+  "source_rebuild_matches_tested_exe": true,
+  "final_sprite_matches_validation": true,
+  "all_three_zip_checksums_match": true,
+  "exe_sha256": "860047e37628a1b2eea79ee2afea60f0c4baaf87e2e2cf1724a39efbd5e85c88",
+  "sprite_sha256": "c986606535a08a08934d9d4fbc82daa95761e75f94093cdd8e2eea4fd751e94d",
+  "previous_version": "archive/dragon-before-v2-2026-11-13",
+  "source_package_structure": "Dragon-Source with sibling package templates",
+  "native_test_passes": 9
+}

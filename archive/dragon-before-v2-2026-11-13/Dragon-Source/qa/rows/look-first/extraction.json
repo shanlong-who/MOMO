@@ -1,0 +1,11 @@
+{
+  "state": "look-first",
+  "expected.frames": 8,
+  "connected.figures": 8,
+  "method": "connected component extraction with two-pixel edge retention",
+  "source": "artwork/rows/look-first.png",
+  "source.width": 1774,
+  "source.height": 887,
+  "min.height": 414,
+  "max.height": 422
+}
